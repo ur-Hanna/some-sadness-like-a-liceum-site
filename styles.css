@@ -1,3 +1,12 @@
+:root {
+    --dark-color: #2f2f2f;
+    --light-color: #f6f6f6;
+    --dark-accent: #01412d;
+    --light-accent: #ffe174;
+    --link-color: #1d7723;
+}
+
+/* СКИДАННЯ СТИЛІВ */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,40 +14,44 @@
 }
 
 body {
-    background: #596bdb;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: "Verdana", "Tahoma", "Arial", sans-serif;
+    font-weight: 400;
     font-size: 12px;
+    line-height: 1.4;
+    font-style: normal;
+    color: var(--dark-color);
+
     padding: 0;
     margin: 0;
-    color: #555;
-    line-height: 17px;
+    background-color: var(--light-accent);
 }
 
 p {
-    line-height: 110%;
     padding: 0px;
     margin: 12px 0px 12px 0px;
 }
 
 img {
+    display: block;
     border: none;
 }
 
 a {
-    color: #098f02;
+    text-decoration: none;
+    color: var(--dark-color);
 }
 
 a:hover {
     text-decoration: none;
-    color: #000;
+    color: var(--link-color);
 }
 
 h3 {
-    border-bottom: 1px dotted #aaa;
-    color: #666;
+    border-bottom: 1px dotted var(--dark-accent);
+    color: var(--dark-accent);
     padding-bottom: 4px;
     margin: 14px 0 7px 0;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 22px;
     letter-spacing: -1px;
 }
@@ -53,64 +66,88 @@ h3 a:hover {
     color: #999;
 }
 
+/* ОБГОРТКА САЙТУ */
 #wrap {
-    width: 1200px;
+    width: max-content;
     margin: 0 auto;
     box-shadow: 1px 5px 11px 4px rgba(0, 0, 0, 0.4);
 }
 
-#header {
-    background: url("../../../../../../media/Golovna.jpg") no-repeat, linear-gradient(180deg, rgba(0, 91, 187, 1) 0%, rgba(0, 91, 187, 1) 45%, rgba(255, 213, 0, 1) 55%, rgba(255, 213, 0, 1) 100%);
+/* СТИЛІ ХЕДЕРА */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    min-height: 140px;
+    padding: 15px;
+    background: url("../../../../../../media/liceum-emblem.jpg") no-repeat, var(--light-color);
     background-size: contain;
-    font-family: "Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
-    height: 150px;
-    padding: 0 15px;
+    background-position: 33px 2px;
 }
 
-#header h1 {
-    font-size: 40px;
-    font-weight: 100;
-    letter-spacing: -1px;
-    padding-top: 40px;
-    text-align: right;
+.site-title__wrap {
+    width: 290px;
+    margin-left: 160px;
 }
 
-#header h1 a {
-    color: #ffd500;
-    text-decoration: none;
+.site__title {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
 }
 
-#header h1 a:hover {
-    color: #edca16;
-    text-decoration: none;
-}
-
-#header h2 {
-    display: none;
-    font-size: 16px;
-    color: #F68E8B;
-    padding: 24px 0 0 38px;
-    text-align: right;
+.site--pretitle {
+    font-family: "Lucida Bright", "Times New Roman", serif;
     font-weight: 600;
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: normal;
+
+    padding: 0 0 0 15px;
+    margin-bottom: 3px;
+    text-shadow: 2px 2px 3px var(--dark-accent);
+    color: var(--light-accent);
 }
 
-#header h2 a {
-    color: #FF7328;
-    text-decoration: none;
+.site--aftertitle {
+    font-family: "Verdana", "Tahoma", "Arial", sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: none;
+    display: inline-flex;
+    padding: 0 0 0 15px;
+    color: var(--dark-accent);
+    text-shadow: none;
 }
 
-#header h2 a:hover {
-    color: #111;
-    text-decoration: none;
+.contacts__wrap {
+    display: flex;
+    column-gap: 30px;
+    justify-content: flex-end;
 }
 
+.address,
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    font-family: "Verdana", "Tahoma", "Arial", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.8;
+    font-style: inherit;
+}
+
+/* СТИЛІ МЕНЮ ВГОРІ*/
 #menu {
-    background: #fff url(images/menu.png) no-repeat;
+    background: var(--light-color);
     background-size: 100%;
     background-position: bottom center;
-    height: 30px;
+    height: auto;
     line-height: 30px;
-    padding-left: 40px;
+    border-bottom: var(--dark-accent) 1px dotted;
 }
 
 #menu ul {
@@ -125,22 +162,21 @@ h3 a:hover {
 
 #menu li a {
     display: block;
-    padding: 0 10px;
+    padding: 5px 10px;
     text-decoration: none;
-    font-size: 13px;
-    color: #fff;
+    font-size: 17px;
+    color: var(--dark-accent);
 }
 
 #menu li a:hover {
-    color: #fff;
-    text-decoration: underline;
-    background: #aaa url(images/menuover.png) repeat-x;
+    color: var(--light-color);
+    background: var(--dark-accent);
+    border-radius: 3px;
 }
 
 #content {
-    padding: 0 80px;
-    background: #fff url(images/content.png) repeat-y;
-    background-size: 100%;
+    padding: 0 30px;
+    background: var(--light-color);
 }
 
 #content li {
@@ -170,62 +206,43 @@ h3 a:hover {
     font-size: 13px;
 }
 
-#left {
+#right {
+    margin-left: 30px;
     padding: 10px 0;
-    width: 805px;
+    width: 1000px;
     float: right;
     font-size: 12px;
     text-align: justify;
 }
 
-#left h2 {
-    border-bottom: 1px dotted #aaa;
-    letter-spacing: 1px;
-    padding: 15px 0px 5px 0px;
-    margin: 0px 0px 5px 0px;
-    font-size: 18px;
-    color: #FF7328;
-    font-weight: normal;
-}
-
-#left h3 {
-    border-bottom: 1px dotted #aaa;
+#right h2 {
+    border-bottom: 1px dotted var(--dark-accent);
     letter-spacing: 1px;
 }
 
-#left ul {
-    color: #555555;
-    padding: 10px 3px 0 30px;
-}
-
-#left ul li {
-    list-style-type: square;
-}
-
-p .facebook-link:hover {
-    color: #1877F2;
-}
-
-#right {
-    padding: 20px 0;
+#left {
+    padding: 12px 0;
     width: 180px;
     float: left;
 }
 
-#right h3 {
-    background: #aaa url(images/sidebarh3.png) no-repeat;
-    height: 30px;
-    line-height: 30px;
+#left h3 {
+    font-size: 17px;
+    line-height: 1.8;
     letter-spacing: 1px;
-    font-size: 16px;
-    border: none;
-    padding: 0 0 0 0px;
-    margin: 0;
-    color: #111;
     text-align: center;
+
+    height: fit-content;
+    padding: 3px 10px;
+    margin: 0;
+
+    background-color: var(--dark-accent);
+    color: var(--dark-color);
+    border: none;
+    border-radius: 4px;
 }
 
-#right h2 {
+#left h2 {
     background: #aaa url(images/sidebarh2.png) no-repeat;
     height: 30px;
     line-height: 30px;
@@ -239,7 +256,7 @@ p .facebook-link:hover {
     font-weight: normal;
 }
 
-#right h1 {
+#left h1 {
     background: #aaa url(images/sidebarh1.png) no-repeat;
     height: 30px;
     line-height: 30px;
@@ -253,16 +270,16 @@ p .facebook-link:hover {
     font-weight: normal;
 }
 
-#right ul {
+#left ul {
     padding: 10px 0 20px 10px;
 }
 
-#right ul li {
+#left ul li {
     list-style-type: none;
     padding: 2px 0 3px 0;
 }
 
-#right ul li a {
+#left ul li a {
     color: #fe4e00;
     font-weight: 100;
     display: block;
@@ -271,13 +288,15 @@ p .facebook-link:hover {
     font-size: 13px;
 }
 
-#right ul li a:hover {
+#left ul li a:hover {
     color: #000;
 }
 
-#right p {
+#left p {
     padding: 0px 0 20px 10px;
 }
+
+
 
 #bottom {
     background: #fff url(images/footer.png) no-repeat;
