@@ -1,0 +1,478 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #596bdb;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    color: #555;
+    line-height: 17px;
+}
+
+p {
+    line-height: 110%;
+    padding: 0px;
+    margin: 12px 0px 12px 0px;
+}
+
+img {
+    border: none;
+}
+
+a {
+    color: #098f02;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+h3 {
+    border-bottom: 1px dotted #aaa;
+    color: #666;
+    padding-bottom: 4px;
+    margin: 14px 0 7px 0;
+    font-weight: 100;
+    font-size: 22px;
+    letter-spacing: -1px;
+}
+
+h3 a {
+    text-decoration: none;
+    font-size: 22px;
+    letter-spacing: -1px;
+}
+
+h3 a:hover {
+    color: #999;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 1px 5px 11px 4px rgba(0, 0, 0, 0.4);
+}
+
+#header {
+    background: url("../../../../../../media/Golovna.jpg") no-repeat, linear-gradient(180deg, rgba(0, 91, 187, 1) 0%, rgba(0, 91, 187, 1) 45%, rgba(255, 213, 0, 1) 55%, rgba(255, 213, 0, 1) 100%);
+    background-size: contain;
+    font-family: "Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+    height: 150px;
+    padding: 0 15px;
+}
+
+#header h1 {
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    padding-top: 40px;
+    text-align: right;
+}
+
+#header h1 a {
+    color: #ffd500;
+    text-decoration: none;
+}
+
+#header h1 a:hover {
+    color: #edca16;
+    text-decoration: none;
+}
+
+#header h2 {
+    display: none;
+    font-size: 16px;
+    color: #F68E8B;
+    padding: 24px 0 0 38px;
+    text-align: right;
+    font-weight: 600;
+}
+
+#header h2 a {
+    color: #FF7328;
+    text-decoration: none;
+}
+
+#header h2 a:hover {
+    color: #111;
+    text-decoration: none;
+}
+
+#menu {
+    background: #fff url(images/menu.png) no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 40px;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#menu li {
+    float: left;
+    list-style-type: none;
+}
+
+#menu li a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+}
+
+#menu li a:hover {
+    color: #fff;
+    text-decoration: underline;
+    background: #aaa url(images/menuover.png) repeat-x;
+}
+
+#content {
+    padding: 0 80px;
+    background: #fff url(images/content.png) repeat-y;
+    background-size: 100%;
+}
+
+#content li {
+    list-style-type: none;
+}
+
+#content li a {
+    color: #336699;
+    font-weight: 100;
+}
+
+#content ul {
+    padding: 10px 0 20px 10px;
+}
+
+#content ul li {
+    list-style-type: none;
+    padding: 2px 0 3px 0;
+}
+
+#content ul li a {
+    color: #336699;
+    font-weight: 100;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px dotted #aaa;
+    font-size: 13px;
+}
+
+#left {
+    padding: 10px 0;
+    width: 805px;
+    float: right;
+    font-size: 12px;
+    text-align: justify;
+}
+
+#left h2 {
+    border-bottom: 1px dotted #aaa;
+    letter-spacing: 1px;
+    padding: 15px 0px 5px 0px;
+    margin: 0px 0px 5px 0px;
+    font-size: 18px;
+    color: #FF7328;
+    font-weight: normal;
+}
+
+#left h3 {
+    border-bottom: 1px dotted #aaa;
+    letter-spacing: 1px;
+}
+
+#left ul {
+    color: #555555;
+    padding: 10px 3px 0 30px;
+}
+
+#left ul li {
+    list-style-type: square;
+}
+
+p .facebook-link:hover {
+    color: #1877F2;
+}
+
+#right {
+    padding: 20px 0;
+    width: 180px;
+    float: left;
+}
+
+#right h3 {
+    background: #aaa url(images/sidebarh3.png) no-repeat;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: none;
+    padding: 0 0 0 0px;
+    margin: 0;
+    color: #111;
+    text-align: center;
+}
+
+#right h2 {
+    background: #aaa url(images/sidebarh2.png) no-repeat;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: none;
+    padding: 0 0 0 0px;
+    margin: 0;
+    color: #111;
+    text-align: center;
+    font-weight: normal;
+}
+
+#right h1 {
+    background: #aaa url(images/sidebarh1.png) no-repeat;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: none;
+    padding: 0 0 0 0px;
+    margin: 0;
+    color: #111;
+    text-align: center;
+    font-weight: normal;
+}
+
+#right ul {
+    padding: 10px 0 20px 10px;
+}
+
+#right ul li {
+    list-style-type: none;
+    padding: 2px 0 3px 0;
+}
+
+#right ul li a {
+    color: #fe4e00;
+    font-weight: 100;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px dotted #aaa;
+    font-size: 13px;
+}
+
+#right ul li a:hover {
+    color: #000;
+}
+
+#right p {
+    padding: 0px 0 20px 10px;
+}
+
+#bottom {
+    background: #fff url(images/footer.png) no-repeat;
+    background-size: 100%;
+    padding: 15px 0;
+}
+
+#footer {
+    background-color: #fff;
+    color: #111;
+    font-size: 11px;
+    text-align: center;
+}
+
+#footer a {
+    color: #111;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+/***** последние новости на главной *****/
+.last-news-date {
+    float: right;
+    font-style: italic;
+    color: #959595;
+    font-size: 80%;
+}
+
+.last-news-title {
+    font-weight: bold;
+    clear: both;
+    text-decoration: underline;
+}
+
+.last-news-mess {
+    margin-bottom: 10px;
+}
+
+/***** guestbook & feedback *****/
+.error {
+    border: 1px solid #F1008B;
+    background-color: #FFDFF1;
+    color: #FF3366;
+    padding: 3px 10px;
+}
+
+.info {
+    border: 1px solid #66CC00;
+    background-color: #F0FFC4;
+    color: #66CC00;
+    padding: 3px 10px;
+}
+
+/****** форма обратной связи ******/
+.feedback {
+    border: 0;
+    width: 100%;
+}
+
+.feedback td {
+    width: 32%;
+}
+
+.feedback input,
+.feedback textarea {
+    width: 100%;
+    border: 1px solid #969696;
+    color: #3E3E3E;
+}
+
+.feedback input:hover,
+.feedback textarea:hover {
+    border-color: #000;
+    color: #000;
+}
+
+/****** оформление гостевой ******/
+#captcha {
+    background-color: #FFFFFF;
+    border: 1px solid #969696;
+    display: inline;
+    cursor: pointer;
+}
+
+#guestbook #captcha {
+    margin: 0 0 -5px 0 !important;
+}
+
+.error {
+    border: 1px solid #F1008B;
+    background-color: #FFDFF1;
+    color: #FF3366;
+    padding: 3px 10px;
+}
+
+.info {
+    border: 1px solid #66CC00;
+    background-color: #F0FFC4;
+    color: #66CC00;
+    padding: 3px 10px;
+}
+
+.guestbook {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.guestbook TD {
+    padding: 3px;
+}
+
+.guestbook input,
+.guestbook textarea {
+    width: 100%;
+    border: 1px solid #969696;
+    color: #3E3E3E;
+}
+
+.guestbook input:hover,
+.guestbook textarea:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.gb_post {
+    background-color: #EAEAEA;
+    border: 1px solid #D3D3D3;
+    padding: 3px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.gb_subj {
+    font-weight: bold;
+    border-bottom: 1px dashed #D3D3D3;
+}
+
+.gb_date {
+    font-style: italic;
+    color: #7F7F7F;
+    padding-left: 5px;
+    font-weight: normal;
+    float: right;
+    font-size: 80%;
+}
+
+.gb_author {
+    color: #FF3366;
+    padding-left: 20px;
+    line-height: 20px;
+    background-image: url(images/mail.png);
+    background-repeat: no-repeat;
+}
+
+.gb_message {
+    clear: both;
+}
+
+.gb_comment_link {
+    background-image: url(images/comments.png);
+    background-repeat: no-repeat;
+    color: #ff33cc;
+    padding-left: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.gb_comment {
+    background-color: transparent;
+    border: 1px dashed #D3D3D3;
+    padding: 3px;
+    margin: 5px 0 5px 20px;
+    position: relative;
+}
+
+.gb_nav a {
+    border: 1px solid #D3D3D3;
+    background-color: #E8E8E8;
+    text-decoration: none;
+    padding: 1px;
+    margin: 1px;
+    color: #000000;
+}
+
+.gb_nav a:hover {
+    color: #F1008B;
+    border-color: #F1008B;
+}
+
+.gb_nav a.current {
+    font-weight: bold;
+    color: #F1008B;
+    border-color: #F1008B;
+}
