@@ -210,6 +210,10 @@ li {
     border-radius: 3px;
 }
 
+/* СТИЛІ ДЛЯ СКРИПТА ДАТИ ТА ЧАСУ */
+.date-and-time {
+    font-size: 14px;
+    color: var(--dark-color);
 }
 
 /* СТИЛІ КОНТЕНТУ */
