@@ -210,18 +210,12 @@ li {
     border-radius: 3px;
 }
 
-#right {
-    margin-left: 30px;
-    padding: 10px 0;
-    width: 1000px;
-    float: right;
-    font-size: 12px;
-    text-align: justify;
 }
 
-#right h2 {
-    border-bottom: 1px dotted var(--dark-accent);
-    letter-spacing: 1px;
+/* СТИЛІ КОНТЕНТУ */
+#content {
+    padding: 20px 30px;
+    background: var(--light-color);
 }
 
 #left {
@@ -300,16 +294,24 @@ li {
     padding: 0px 0 20px 10px;
 }
 
-
-
-#bottom {
-    background: #fff url(images/footer.png) no-repeat;
-    background-size: 100%;
+/* СТИЛІ КОНТЕНТУ ПО ЦЕНТРУ СТОРІНКИ */
+#right {
+    margin-top: -39px;
+    margin-left: 15px;
     padding: 15px 0;
+    width: 1030px;
+    float: right;
+    font-size: 12px;
+    text-align: justify;
+}
+
+#right h2 {
+    border-bottom: 1px dotted var(--blue-accent);
+    letter-spacing: 1px;
 }
 
 #footer {
-    background-color: #fff;
+    background-color: var(--light-color);
     color: #111;
     font-size: 11px;
     text-align: center;
