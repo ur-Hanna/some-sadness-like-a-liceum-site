@@ -4,7 +4,7 @@
     --blue-accent: #244d99;
     --yellow-accent: #ffe365;
     --link-color: #fec72c;
-
+    /* --color: #f47236; */
 }
 
 /* СКИДАННЯ СТИЛІВ */
@@ -17,7 +17,7 @@
 body {
     font-family: "Verdana", "Tahoma", "Arial", sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.4;
     font-style: normal;
     color: var(--dark-color);
@@ -30,6 +30,8 @@ body {
 p {
     padding: 0px;
     margin: 8px 0px;
+
+    color: var(--dark-color);
 }
 
 h1,
@@ -40,6 +42,8 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
+
+    color: var(--dark-color);
 }
 
 img {
@@ -49,7 +53,7 @@ img {
 
 a {
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--blue-accent);
 }
 
 a:hover,
@@ -60,7 +64,7 @@ a:focus {
 }
 
 li {
-    list-style-type: none;
+    list-style: none;
 }
 
 /* ОБГОРТКА САЙТУ */
@@ -76,14 +80,14 @@ li {
     justify-content: space-between;
     align-items: center;
     min-height: 140px;
-    padding: 15px 40px;
+    padding: 15px 30px;
     background: url("../../../../../../media/liceum-emblem.jpg") no-repeat, var(--light-color);
     background-size: contain;
-    background-position: 40px 2px;
+    background-position: 30px 2px;
 }
 
 .site-title__wrap {
-    width: 320px;
+    width: 540px;
     margin-left: 160px;
 }
 
@@ -115,6 +119,13 @@ li {
     padding: 0 0 0 15px;
     color: #486aaa;
     text-shadow: none;
+}
+
+.site--quote {
+    margin: 0;
+    padding-left: 12px;
+    font-weight: 600;
+    color: #f47236;
 }
 
 /* СТИЛІ АДРЕСИ ТА КОНТАКТІВ */
@@ -175,11 +186,12 @@ li {
     position: sticky;
     top: 0;
 
-    background: var(--light-color);
+    background: #486aaa;
     background-size: 100%;
     background-position: bottom center;
     height: auto;
     line-height: 1.6;
+    border-top: var(--blue-accent) 1px dotted;
     border-bottom: var(--blue-accent) 1px dotted;
 }
 
@@ -196,11 +208,12 @@ li {
 }
 
 .top-menu__link {
-    display: block;
-    padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    padding: 7px 0;
     text-decoration: none;
     font-size: 17px;
-    color: var(--blue-accent);
+    color: var(--light-color);
 }
 
 .top-menu__link:hover,
@@ -208,6 +221,37 @@ li {
     color: var(--light-color);
     background: #486aaa;
     border-radius: 3px;
+}
+
+.top-menu__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--link-color);
+    border-radius: 1px;
+    transition: opacity 150ms linear;
+}
+
+.top-menu__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--link-color);
+    border-radius: 1px;
+    transition: opacity 150ms linear;
+}
+
+.top-menu__link:hover::before,
+.top-menu__link:hover::after {
+    opacity: 1;
 }
 
 /* СТИЛІ ДЛЯ СКРИПТА ДАТИ ТА ЧАСУ */
@@ -276,24 +320,27 @@ li {
 }
 
 /* СТИЛІ КОНТЕНТУ ПО ЦЕНТРУ СТОРІНКИ */
-#right {
-    margin-top: -39px;
-    margin-left: 15px;
-    padding: 15px 0;
+.main-content {
+    padding: 18px 0 18px 18px;
     width: 1030px;
     float: right;
     font-size: 12px;
     text-align: justify;
 }
 
-#right h2 {
+.main-content__title {
+    margin-bottom: 17px;
     border-bottom: 1px dotted var(--blue-accent);
     letter-spacing: 1px;
 }
 
-#footer {
+.main-content__form {}
+
+.footer {
+    font-family: Lucida Bright;
+    padding: 15px 0;
     background-color: var(--light-color);
-    color: #111;
+    color: var(--dark-color);
     font-size: 11px;
     text-align: center;
 }
@@ -308,15 +355,6 @@ li {
     color: #111;
     text-decoration: underline;
 }
-
-/* h3 {
-    border-bottom: 1px dotted #486aaa;
-    color: #486aaa;
-    padding-bottom: 4px;
-    margin: 14px 0 7px 0;
-    font-weight: 400;
-    font-size: 22px;
-    letter-spacing: -1px;} */
 
 
 /***** последние новости на главной *****/
@@ -352,7 +390,7 @@ li {
     padding: 3px 10px;
 }
 
-/****** форма обратной связи ******/
+/****** форма ЗВОРОТНОГО ЗВ'ЯЗКУ ******/
 .feedback {
     border: 0;
     width: 100%;
@@ -365,20 +403,20 @@ li {
 .feedback input,
 .feedback textarea {
     width: 100%;
-    border: 1px solid #969696;
-    color: #3E3E3E;
+    border: 1px solid var(--blue-accent);
+    color: var(--dark-color);
 }
 
 .feedback input:hover,
 .feedback textarea:hover {
-    border-color: #000;
-    color: #000;
+    border-color: var(--blue-accent);
+    color: var(--dark-color);
 }
 
 /****** оформление гостевой ******/
 #captcha {
     background-color: #FFFFFF;
-    border: 1px solid #969696;
+    border: 1px solid #244d99;
     display: inline;
     cursor: pointer;
 }
@@ -492,4 +530,56 @@ li {
     font-weight: bold;
     color: #F1008B;
     border-color: #F1008B;
+}
+
+/* SLIDER FOR PSYCOLOGIST PAGE */
+.slider {
+    z-index: 9;
+    width: 700px;
+    height: 290px;
+    overflow: hidden;
+    margin: 0 0 7px;
+    position: relative;
+}
+
+.slider ul,
+.slider li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.slider ul {
+    width: 9999px;
+}
+
+.slider ul li {
+    list-style-type: none;
+    float: left;
+    width: 700px;
+    height: 290px;
+}
+
+.slider .nav {
+    position: absolute;
+    left: 15px;
+    bottom: 12px;
+}
+
+.slider .nav span {
+    opacity: 0.9;
+    background: #fff;
+    margin: 0 8px 0 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    float: left;
+    box-shadow: 0 1px 2px #000;
+}
+
+.slider .nav span.on {
+    background: #2e9419;
 }
