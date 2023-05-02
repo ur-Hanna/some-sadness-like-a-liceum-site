@@ -339,9 +339,9 @@ li {
 .footer {
     font-family: Lucida Bright;
     padding: 15px 0;
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    font-size: 11px;
+    background-color: #486aaa;
+    color: var(--light-color);
+    font-size: 12px;
     text-align: center;
 }
 
