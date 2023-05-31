@@ -270,7 +270,7 @@ li {
 .navigation {
     padding: 15px 0;
     margin-right: 15px;
-    width: 280px;
+    width: 270px;
     float: left;
 }
 
@@ -322,7 +322,7 @@ li {
 /* СТИЛІ КОНТЕНТУ ПО ЦЕНТРУ СТОРІНКИ */
 .main-content {
     padding: 18px 0 18px 18px;
-    width: 1030px;
+    width: 1040px;
     float: right;
     font-size: 12px;
     text-align: justify;
