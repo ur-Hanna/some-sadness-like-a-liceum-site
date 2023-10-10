@@ -140,7 +140,7 @@ li {
 }
 
 .site--aftertitle {
-  font-family: "Verdana", "Tahoma", "Arial", sans-serif;
+  font-family: "Verdana", "Tahoma", sans-serif;
   font-size: 19px;
   font-weight: 600;
   line-height: 1.3;
@@ -164,11 +164,25 @@ li {
   }
 }
 
+/* СТИЛІ ДЛЯ СКРИПТА ДАТИ ТА ЧАСУ */
+.date-and-time {
+  padding: 9px;
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.contacts-n-date__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 /* СТИЛІ АДРЕСИ ТА КОНТАКТІВ */
 .contacts__wrap {
   display: flex;
   column-gap: 30px;
   justify-content: flex-end;
+  margin-bottom: 15px;
 }
 
 .address,
@@ -181,7 +195,7 @@ li {
   width: max-content;
   margin: 0;
 
-  font-family: "Verdana", "Tahoma", "Arial", sans-serif;
+  font-family: "Verdana", "Tahoma", sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: .4;
@@ -288,12 +302,6 @@ li {
 .top-menu__link:hover::before,
 .top-menu__link:hover::after {
   opacity: 1;
-}
-
-/* СТИЛІ ДЛЯ СКРИПТА ДАТИ ТА ЧАСУ */
-.date-and-time {
-  font-size: 14px;
-  color: var(--dark-color);
 }
 
 /* СТИЛІ КОНТЕНТУ */
