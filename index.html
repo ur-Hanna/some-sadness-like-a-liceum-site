@@ -2,13 +2,13 @@
 <html lang="uk">
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta charset="windows-1251" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     <!-- <?php echo $sitename;?> -->
     <?php echo $sitetitle;?>
   </title>
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="<?php echo $metakeywords;?>" />
   <meta name="description" content="<?php echo $metadescription;?>" />
   <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -28,23 +28,20 @@
 <body>
   <div id="wrap">
     <!-- header -> in separate html -->
-    <a href="./header.html"></a>
-
+    <link rel="import" href="./header.html">
     <!-- menu -> in separate html -->
-    <a href="./menu.html"></a>
-
-
+    <link rel="import" href="./menu.html">
     <div id="content">
-      <div class="left--wrap">
+      <aside class="sidebar">
         <nav id="left" class="navigation">
           <h2 class="navigation__title">Навігація</h2>
           <ul class="navigation__list">
             <!-- <?php include $_SERVER['DOCUMENT_ROOT'].'/engine/menu.php'; ?> -->
             <!-- navigation list -> in separate html -->
-            <a href="./navigation-list.html"></a>
+            <link rel="import" href="./navigation-list.html">
           </ul>
         </nav>
-      </div>
+      </aside>
 
       <div id="right" class="main-content">
         <h2 class="main-content__title">Зараз ви на сторінці →
@@ -53,20 +50,19 @@
         <!-- search script -->
         <script async src="https://cse.google.com/cse.js?cx=915acb8bdb13344fa"></script>
         <div class="gcse-search">&nbsp;</div>
-        <!-- --- -->
+        <!-- makes main content visible -->
         <?php echo $contentcenter;?>
-        <div class="main-content__form">
+        <!-- <div class="main-content__form">
           <?php include $_SERVER['DOCUMENT_ROOT'].'/mycode/'.$myinclude.'.php'; ?>
-        </div>
+        </div> -->
       </div>
       <!-- НАСТУПНИЙ DIV НЕ ВИТИРАТИ -->
       <div style="clear:both;"></div>
     </div>
 
     <!-- ТУТ БУДЕ КНОПКА "ВГОРУ" -->
-    <footer id="footer" class="footer">© 2010 - 2023
-      <?php echo $sitename;?>
-    </footer>
+    <!-- footer -> in separate html -->
+    <link rel="import" href="./footer.html">
   </div>
 </body>
 
