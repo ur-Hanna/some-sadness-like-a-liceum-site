@@ -21,7 +21,6 @@ body {
   line-height: 1.4;
   font-style: normal;
   color: var(--dark-color);
-
   padding: 0;
   margin: 0;
   background-color: #f0e1d1;
@@ -30,7 +29,6 @@ body {
 p {
   padding: 0px;
   margin: 8px 0px;
-
   color: var(--dark-color);
 }
 
@@ -42,7 +40,6 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-
   color: var(--dark-color);
 }
 
@@ -50,6 +47,21 @@ img {
   display: inline-block;
   border: none;
 }
+
+/* phone */
+/* @media screen and (min-width: 320px) {
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+} */
+
+/* tablet 768 */
+/* @media screen and (min-width: 768px) {
+  img {
+    width: auto !important;
+  }
+} */
 
 a {
   text-decoration: none;
@@ -67,11 +79,44 @@ li {
   list-style: none;
 }
 
+table {
+  width: 100%;
+}
+
 /* ОБГОРТКА САЙТУ */
 #wrap {
-  max-width: 1400px;
   margin: 0 auto;
-  box-shadow: 1px 5px 11px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  #wrap {
+    max-width: 480px;
+    box-shadow: none;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  #wrap {
+    max-width: 768px;
+    box-shadow: 1px 1px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  #wrap {
+    max-width: 1024px;
+    box-shadow: 1px 5px 11px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  #wrap {
+    max-width: 1280px;
+  }
 }
 
 /* СТИЛІ ХЕДЕРА */
@@ -79,129 +124,316 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 140px;
-  padding: 15px 30px;
-  background: url("../../../../../../media/liceum-emblem.jpg") no-repeat, var(--light-color);
-  background-size: contain;
-  background-position: 30px 2px;
+  width: auto;
+  /* min-height: 140px; */
 }
 
-@media screen and (max-width: 1385px) {
+/* phone */
+@media screen and (min-width: 320px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--light-color);
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
   .header {
     padding: 15px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    padding: 15px 30px;
     background: url("../../../../../../media/liceum-emblem.jpg") no-repeat, var(--light-color);
-    background-size: 170px;
+    background-size: contain;
     background-position: 30px 2px;
   }
 }
 
-@media screen and (max-width: 1010px) {
-  .header {
-    padding: 15px;
-    /* background: url("../../../../../../media/liceum-emblem.jpg") no-repeat, var(--light-color); */
-    background-size: 170px;
-    /* background-position: 30px 2px; */
+/* phone */
+@media screen and (min-width: 320px) {
+  .site-title__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0;
   }
 }
 
-.site-title__wrap {
-  width: 540px;
-  margin-left: 160px;
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .site-title__wrap {
+    width: 750px;
+  }
 }
 
-.site__title {
-  display: flex;
-  flex-direction: column;
-  width: 290px;
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .site-title__wrap {
+    width: 300px;
+    margin-left: 160px;
+  }
 }
 
-@media screen and (max-width: 1385px) {
-  .site__title {
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .site-title__wrap {
+    width: 440px;
+  }
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .site-title {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .site-title {
+    text-align: left;
   }
 }
 
 .site--pretitle {
   font-family: "Lucida Bright", "Times New Roman", serif;
   font-weight: 600;
-  font-size: 57px;
   text-transform: uppercase;
   line-height: normal;
-  padding: 0 0 0 15px;
-  margin-bottom: 3px;
-  text-shadow: 2px 2px 2px #486aaa;
   color: var(--blue-accent);
 }
 
-@media screen and (max-width: 1385px) {
+/* phone */
+@media screen and (min-width: 320px) {
   .site--pretitle {
-    font-size: 35px;
+    font-size: 27px;
+    text-shadow: 1px 1px 2px #486aaa;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .site--pretitle {
+    font-size: 37px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .site--pretitle {
+    padding: 0 0 0 15px;
+    font-size: 47px;
+    text-shadow: 2px 2px 2px #486aaa;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .site--pretitle {
+    font-size: 57px;
   }
 }
 
 .site--aftertitle {
   font-family: "Verdana", "Tahoma", sans-serif;
-  font-size: 19px;
   font-weight: 600;
   line-height: 1.3;
   text-transform: none;
-  display: inline-flex;
-  padding: 0 0 0 15px;
+  /* display: inline-flex; */
   color: #486aaa;
   text-shadow: none;
 }
 
-.site--quote {
-  margin: 0;
-  padding-left: 12px;
-  font-weight: 600;
-  color: #f47236;
+/* phone */
+@media screen and (min-width: 320px) {
+  .site--aftertitle {
+    font-size: 15px;
+  }
 }
 
-@media screen and (max-width: 1385px) {
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .site--aftertitle {
+    font-size: 17px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .site--aftertitle {
+    padding: 0 0 0 15px;
+    font-size: 15px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .site--aftertitle {
+    font-size: 19px;
+  }
+}
+
+.site--quote {
+  margin: 0;
+  font-weight: 600;
+  color: #f47236;
+  text-align: left;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
   .site--quote {
+    display: none;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .site--quote {
+    display: block;
     text-align: center;
   }
 }
 
-/* СТИЛІ ДЛЯ СКРИПТА ДАТИ ТА ЧАСУ */
-.date-and-time {
-  padding: 9px;
-  font-size: 14px;
-  color: var(--dark-color);
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .site--quote {
+    padding-left: 12px;
+    text-align: left;
+  }
 }
 
-.contacts-n-date__wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .site--quote {}
 }
 
-/* СТИЛІ АДРЕСИ ТА КОНТАКТІВ */
+/* СТИЛІ ДЛЯ КОНТАКТІВ, АДРЕСИ ТА СКРИПТА ДАТИ ТА ЧАСУ */
+/* phone */
+@media screen and (min-width: 320px) {
+  .contacts-n-date__wrap {
+    display: none;
+    /* max-width: 480px; */
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .contacts-n-date__wrap {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .contacts-n-date__wrap {
+    width: 500px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .contacts-n-date__wrap {
+    width: 540px;
+  }
+}
+
 .contacts__wrap {
-  display: flex;
   column-gap: 30px;
-  justify-content: flex-end;
-  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .contacts__wrap {
+    display: none;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .contacts__wrap {
+    display: flex;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .contacts__wrap {
+    flex-direction: column;
+    width: 280px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .contacts__wrap {
+    flex-direction: row;
+    width: 540px;
+    margin-bottom: 15px;
+  }
 }
 
 .address,
 .contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  width: max-content;
+  /* width: max-content; */
   margin: 0;
-
   font-family: "Verdana", "Tahoma", sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: .4;
   font-style: inherit;
   color: #486aaa;
-  text-decoration: underline var(--blue-accent) 1px dotted;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+
+  .address,
+  .contacts {
+    display: none;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+
+  .address,
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+
+  .address,
+  .contacts {}
 }
 
 .address p,
@@ -214,7 +446,8 @@ li {
 
 .contacts__mail {}
 
-.contacts__mail-link {
+.contacts__mail-link,
+.contacts__tel-link {
   color: #486aaa;
 }
 
@@ -226,9 +459,37 @@ li {
   color: #1877f2;
 }
 
-.contacts__facebook-ico {
-  display: none;
-  padding-left: 3px;
+
+.date-and-time {
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .date-and-time {
+    display: none;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .date-and-time {}
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .date-and-time {
+    /* max-width: 1000px; */
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .date-and-time {
+    display: block;
+    /* max-width: 1280px; */
+  }
 }
 
 /* СТИЛІ МЕНЮ ВГОРІ*/
@@ -238,24 +499,38 @@ li {
 
   background: #486aaa;
   background-size: 100%;
-  background-position: bottom center;
-  height: auto;
-  line-height: 1.6;
-  border-top: var(--blue-accent) 1px dotted;
-  border-bottom: var(--blue-accent) 1px dotted;
+  border: none;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .top-menu {
+    line-height: 1;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .top-menu {
+    line-height: 1.2;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .top-menu {
+    line-height: 1.4;
+  }
 }
 
 .top-menu__list {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
-.top-menu__item {
-  float: left;
-  list-style-type: none;
-}
+.top-menu__item {}
 
 .top-menu__link {
   display: inline-block;
@@ -269,7 +544,6 @@ li {
 .top-menu__link:hover,
 .top-menu__link:focus {
   color: var(--light-color);
-  background: #486aaa;
   border-radius: 3px;
 }
 
@@ -304,19 +578,72 @@ li {
   opacity: 1;
 }
 
+/* ------------------------------------------------------------------------- */
 /* СТИЛІ КОНТЕНТУ */
 #content {
-  padding: 20px 30px;
+  display: flex;
   background: var(--light-color);
 }
 
-/* СТИЛІ БЛОКУ НАВІГАЦІЇ*/
-.navigation {
-  padding: 15px 0;
-  margin-right: 15px;
-  width: 270px;
-  float: left;
+/* phone */
+@media screen and (min-width: 320px) {
+  #content {
+    flex-direction: column;
+    padding: 7px;
+  }
 }
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  #content {
+    flex-direction: row;
+    padding: 15px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  #content {
+    padding: 20px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  #content {
+    padding: 30px;
+  }
+}
+
+/* --------------------------------------- */
+/* СТИЛІ БЛОКУ НАВІГАЦІЇ */
+.sidebar {
+  float: left;
+  padding: 10px;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    width: 280px;
+  }
+}
+
+.navigation {}
 
 .navigation__title {
   font-size: 17px;
@@ -332,12 +659,10 @@ li {
   border-radius: 4px;
 }
 
-.navigation__list {
-  padding: 10px 0;
-}
+.navigation__list {}
 
 .navigation__item {
-  padding: 4px 0;
+  padding: 5px;
 }
 
 .navigation__link {
@@ -364,23 +689,7 @@ li {
   z-index: 5;
 }
 
-/* СТИЛІ БЛОКУ ПІД БЛОКОМ НАВІГАЦІЇ (ДІЯ)*/
-.left--wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: max-content;
-  float: left;
-}
-
-.left--under-nav {
-  padding: 15px 0;
-  margin-right: 15px;
-  width: 270px;
-}
-
-
-
+/* -------------------------- */
 /* СТИЛІ ОБЛАСТІ ПОШУКУ*/
 .gsc-input-box {
   border-radius: 3px;
@@ -391,19 +700,43 @@ li {
 }
 
 /* СТИЛІ КОНТЕНТУ ПО ЦЕНТРУ СТОРІНКИ */
-@media screen and (max-width: 1385px) {
+.main-content {
+  padding: 10px;
+  float: right;
+  text-align: justify;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
   .main-content {
-    min-width: min-content;
+    width: auto;
+    font-size: 10px;
   }
 }
 
-.main-content {
-  padding: 18px 0 18px 18px;
-  width: 1040px;
-  float: right;
-  font-size: 12px;
-  text-align: justify;
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .main-content {
+    max-width: 518px;
+    font-size: 12px;
+  }
 }
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .main-content {
+    max-width: 690px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .main-content {
+    max-width: 930px;
+  }
+}
+
+/* ------------------------------------ */
 
 .main-content__title {
   margin-bottom: 17px;
@@ -411,29 +744,145 @@ li {
   letter-spacing: 1px;
 }
 
-.main-content__form {}
+/* .main-content__form {} deleted */
 
+/* footer */
 .footer {
-  font-family: Lucida Bright;
-  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
   background-color: #486aaa;
   color: var(--light-color);
-  font-size: 12px;
-  text-align: center;
+}
+
+.footer__info--wrap {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .footer__info--wrap {
+    flex-direction: column;
+    text-align: center;
+    font-size: 10px;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .footer__info--wrap {
+    flex-direction: row;
+    text-align: left;
+    font-size: 12px;
+  }
+}
+
+.footer__info--wrap:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .footer__info {
+    width: auto;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .footer__info {
+    width: 240px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .footer__info {
+    width: 310px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .footer__info {
+    width: 340px;
+  }
+}
+
+.footer__info:not(:last-child) {
+  margin-right: 5px;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+  .footer__info:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .footer__info:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__title {
+  font-family: "Lucida Bright", "Times New Roman", serif;
+  color: var(--light-color);
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.footer__text {
+  color: var(--light-color);
+  margin: 0;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+
+  .footer__text,
+  .footer__title {
+    font-size: 10px;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+
+  .footer__text,
+  .footer__title {
+    font-size: 12px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+
+  .footer__text,
+  .footer__title {
+    font-size: 16px;
+  }
 }
 
 #footer a {
-  color: #111;
-  text-decoration: none;
+  color: var(--light-color);
 }
 
 #footer a:hover,
 #footer a:focus {
-  color: #111;
-  text-decoration: underline;
+  color: var(--link-color);
 }
 
+.footer__address {
+  font-style: normal;
+}
 
+/* _______________________________________________ */
 /***** последние новости на главной *****/
 .last-news-date {
   float: right;
@@ -607,56 +1056,4 @@ li {
   font-weight: bold;
   color: #F1008B;
   border-color: #F1008B;
-}
-
-/* SLIDER FOR PSYCOLOGIST PAGE */
-.slider {
-  z-index: 9;
-  width: 700px;
-  height: 290px;
-  overflow: hidden;
-  margin: 0 0 7px;
-  position: relative;
-}
-
-.slider ul,
-.slider li {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.slider ul {
-  width: 9999px;
-}
-
-.slider ul li {
-  list-style-type: none;
-  float: left;
-  width: 700px;
-  height: 290px;
-}
-
-.slider .nav {
-  position: absolute;
-  left: 15px;
-  bottom: 12px;
-}
-
-.slider .nav span {
-  opacity: 0.9;
-  background: #fff;
-  margin: 0 8px 0 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  overflow: hidden;
-  display: block;
-  float: left;
-  box-shadow: 0 1px 2px #000;
-}
-
-.slider .nav span.on {
-  background: #2e9419;
 }
