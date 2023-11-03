@@ -1,54 +1,54 @@
 <header id="header" class="header">
- <div class="site-title__wrap">
-  <h1 class="site-title"><a href="/">
-    <span class="site--pretitle">Ліцей №3</span>
-    <span class="site--aftertitle">Ладижинської міської ради
-     Вінницької
-     області</span>
-   </a></h1>
-  <p class="site--quote"><q>Від успіхів у навчанні - до успіхів у житті!</q></p>
- </div>
- <div class="contacts-n-date__wrap">
-  <div class="contacts__wrap">
-   <address class="address">
-    <p>Адреса: вул. П.Кравчика 53,</p>
-    <p>м.Ладижин, Гайсинський р-н,</p>
-    <p>Вінницька область, 24321</p>
-   </address>
-
-   <div class="contacts">
-    <p class="contacts__tel">Контактний телефон: 6-17-60</p>
-    <p class="contacts__mail">Email: <a href="mailto:lad_shkola3@ukr.net"
-      class="contacts__mail-link">lad_shkola3@ukr.net</a>
-    </p>
-    <p class="contacts__facebook"><a href="https://www.facebook.com/groups/188523318735306/?ref=share" target="_blank"
-      rel="noopener noreferrer nofollow" class="contacts__facebook-link">Ми на
-      Facebook<span class="contacts__facebook-ico"><img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
-        width="12" height="12" alt="facebook"></span></a></p>
-   </div>
+  <div class="site-title__wrap">
+    <div class="site-title">
+      <a href="/">
+        <h1 class="site--pretitle">Ліцей №3</h1>
+        <h2 class="site--aftertitle">Ладижинської міської ради Вінницької області</h2>
+      </a>
+    </div>
+    <p class="site--quote"><q>Від успіхів у навчанні - до успіхів у житті!</q></p>
   </div>
-  <div id="time" class="date-and-time">
-   <script language="JavaScript">
-    const pos = document.getElementById("time");
-    function time() {
-     const today = new Date();
-     const day_of_week = ["неділя", "понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота"];
-     const month_of_year = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"];
-     const day_ = day_of_week[today.getDay()];
-     const date_ = today.getDate();
-     const month_ = month_of_year[today.getMonth()];
-     const year_ = today.getFullYear();
-     const hours_ = today.getHours();
-     const min_ = today.getMinutes();
-     const sec_ = today.getSeconds();
-     let zerom = zeros = '';
-     if (min_ < 10) zerom = '0';
-     if (sec_ < 10) zeros = '0';
-     pos.innerHTML = '<b>Дата та час:</b> ' + date_ + ' ' + month_ + ' ' + year_ + ' року,' + ' ' + day_ + '. ' + hours_ + ':' + zerom + min_ + ':' + zeros + sec_;
-    }
-    setInterval(time, 1);
-   </script>
+  <div class="contacts-n-date__wrap">
+    <div class="contacts__wrap">
+      <address class="address">
+        <p>Адреса: вул. П.Кравчика, 53,</p>
+        <p>м.Ладижин, Гайсинський р-н,</p>
+        <p>Вінницька область, 24321</p>
+      </address>
+      <div class="contacts">
+        <p class="contacts__tel">📞 Контактний телефон: <a href="tel:+380434361760"
+            class="contacts__tel-link">6-17-60</a>
+        </p>
+        <p class="contacts__mail">📧 Email: <a href="mailto:lad_shkola3@ukr.net"
+            class="contacts__mail-link">lad_shkola3@ukr.net</a>
+        </p>
+        <p class="contacts__facebook"><a href="https://www.facebook.com/groups/188523318735306/?ref=share"
+            target="_blank" rel="noopener noreferrer nofollow" class="contacts__facebook-link">🔗 Наш
+            Facebook</span></a>
+        </p>
+      </div>
+    </div>
+    <div id="time" class="date-and-time">
+      <script language="JavaScript">
+        const pos = document.getElementById("time");
+        function time() {
+          const today = new Date();
+          const day_of_week = ["неділя", "понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота"];
+          const month_of_year = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"];
+          const day_ = day_of_week[today.getDay()];
+          const date_ = today.getDate();
+          const month_ = month_of_year[today.getMonth()];
+          const year_ = today.getFullYear();
+          const hours_ = today.getHours();
+          const min_ = today.getMinutes();
+          const sec_ = today.getSeconds();
+          let zerom = zeros = '';
+          if (min_ < 10) zerom = '0';
+          if (sec_ < 10) zeros = '0';
+          pos.innerHTML = '<b>Дата та час:</b> ' + date_ + ' ' + month_ + ' ' + year_ + ' року,' + ' ' + day_ + '. ' + hours_ + ':' + zerom + min_ + ':' + zeros + sec_;
+        }
+        setInterval(time, 1);
+      </script>
+    </div>
   </div>
- </div>
 </header>
