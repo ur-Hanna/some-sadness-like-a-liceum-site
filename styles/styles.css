@@ -758,8 +758,8 @@ table {
 
 .footer__info--wrap {
   display: flex;
-  justify-content: center;
   width: 100%;
+  justify-content: space-around;
 }
 
 /* phone */
