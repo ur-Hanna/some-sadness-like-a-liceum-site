@@ -830,13 +830,6 @@ table {
   }
 }
 
-.footer__title {
-  font-family: "Lucida Bright", "Times New Roman", serif;
-  color: var(--light-color);
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
 .footer__text {
   color: var(--light-color);
   margin: 0;
@@ -845,8 +838,7 @@ table {
 /* phone */
 @media screen and (min-width: 320px) {
 
-  .footer__text,
-  .footer__title {
+  .footer__text {
     font-size: 10px;
   }
 }
@@ -854,8 +846,7 @@ table {
 /* tablet 768 */
 @media screen and (min-width: 768px) {
 
-  .footer__text,
-  .footer__title {
+  .footer__text {
     font-size: 12px;
   }
 }
@@ -863,8 +854,7 @@ table {
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
 
-  .footer__text,
-  .footer__title {
+  .footer__text {
     font-size: 16px;
   }
 }
