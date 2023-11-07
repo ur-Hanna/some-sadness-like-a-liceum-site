@@ -652,7 +652,7 @@ table {
   letter-spacing: 1px;
   text-align: center;
   padding: 3px 10px;
-
+  margin-bottom: 5px;
   background-color: #486aaa;
   color: var(--light-color);
   border: none;
