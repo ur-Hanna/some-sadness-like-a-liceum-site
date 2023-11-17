@@ -31,3 +31,20 @@
 
 Підключення листка стилів у хтмл
 <link rel="stylesheet" href="./styles/styles.css">
+
+Емоджі з сайту
+👉👈🔧💙💛📞📧🔗📚
+
+<h3><span style="font-size: medium;"><span style="color: #993366;">Трудове навчання</span></span></h3>
+<hr />
+
+
+<!-- тест -->
+<marquee behavior="scroll" direction="left" loop="-1" width="100%">
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-1.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-2.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-3.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-4.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-5.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-6.jpg" width="400" alt="" /></a>
+</marquee>
