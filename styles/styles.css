@@ -49,12 +49,12 @@ img {
 }
 
 /* phone */
-/* @media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
   img {
     width: 100% !important;
     height: auto !important;
   }
-} */
+}
 
 /* tablet 768 */
 /* @media screen and (min-width: 768px) {
