@@ -4,7 +4,6 @@
   --blue-accent: #244d99;
   --yellow-accent: #ffe365;
   --link-color: #fec72c;
-
 }
 
 /* СКИДАННЯ СТИЛІВ */
@@ -49,17 +48,17 @@ img {
 }
 
 /* phone */
-@media screen and (min-width: 320px) {
+/* @media screen and (min-width: 320px) {
   img {
     width: 100% !important;
     height: auto !important;
   }
-}
+} */
 
 /* tablet 768 */
 /* @media screen and (min-width: 768px) {
   img {
-    width: auto !important;
+    max-width: 75% !important;
   }
 } */
 
@@ -313,7 +312,8 @@ table {
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
-  .site--quote {}
+  .site--quote {
+  }
 }
 
 /* СТИЛІ ДЛЯ КОНТАКТІВ, АДРЕСИ ТА СКРИПТА ДАТИ ТА ЧАСУ */
@@ -393,14 +393,13 @@ table {
   font-family: "Verdana", "Tahoma", sans-serif;
   font-size: 13px;
   font-weight: 600;
-  line-height: .4;
+  line-height: 0.4;
   font-style: inherit;
   color: #486aaa;
 }
 
 /* phone */
 @media screen and (min-width: 320px) {
-
   .address,
   .contacts {
     display: none;
@@ -409,7 +408,6 @@ table {
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-
   .contacts {
     display: flex;
     flex-direction: row;
@@ -419,7 +417,6 @@ table {
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-
   .address,
   .contacts {
     display: flex;
@@ -431,9 +428,9 @@ table {
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
-
   .address,
-  .contacts {}
+  .contacts {
+  }
 }
 
 .address p,
@@ -442,23 +439,25 @@ table {
   padding: 9px;
 }
 
-.contacts__tel {}
+.contacts__tel {
+}
 
-.contacts__mail {}
+.contacts__mail {
+}
 
 .contacts__mail-link,
 .contacts__tel-link {
   color: #486aaa;
 }
 
-.contacts__facebook {}
+.contacts__facebook {
+}
 
 .contacts__facebook-link {
   display: inline-flex;
   align-items: center;
   color: #1877f2;
 }
-
 
 .date-and-time {
   font-size: 14px;
@@ -474,7 +473,8 @@ table {
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .date-and-time {}
+  .date-and-time {
+  }
 }
 
 /* desktop 1024 */
@@ -530,7 +530,8 @@ table {
   gap: 15px;
 }
 
-.top-menu__item {}
+.top-menu__item {
+}
 
 .top-menu__link {
   display: inline-block;
@@ -643,7 +644,8 @@ table {
   }
 }
 
-.navigation {}
+.navigation {
+}
 
 .navigation__title {
   font-size: 17px;
@@ -659,7 +661,8 @@ table {
   border-radius: 4px;
 }
 
-.navigation__list {}
+.navigation__list {
+}
 
 .navigation__item {
   padding: 5px;
@@ -837,7 +840,6 @@ table {
 
 /* phone */
 @media screen and (min-width: 320px) {
-
   .footer__text {
     font-size: 10px;
   }
@@ -845,7 +847,6 @@ table {
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-
   .footer__text {
     font-size: 12px;
   }
@@ -853,7 +854,6 @@ table {
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-
   .footer__text {
     font-size: 16px;
   }
@@ -893,16 +893,16 @@ table {
 
 /***** guestbook & feedback *****/
 .error {
-  border: 1px solid #F1008B;
-  background-color: #FFDFF1;
-  color: #FF3366;
+  border: 1px solid #f1008b;
+  background-color: #ffdff1;
+  color: #ff3366;
   padding: 3px 10px;
 }
 
 .info {
-  border: 1px solid #66CC00;
-  background-color: #F0FFC4;
-  color: #66CC00;
+  border: 1px solid #66cc00;
+  background-color: #f0ffc4;
+  color: #66cc00;
   padding: 3px 10px;
 }
 
@@ -931,7 +931,7 @@ table {
 
 /****** оформление гостевой ******/
 #captcha {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid #244d99;
   display: inline;
   cursor: pointer;
@@ -942,16 +942,16 @@ table {
 }
 
 .error {
-  border: 1px solid #F1008B;
-  background-color: #FFDFF1;
-  color: #FF3366;
+  border: 1px solid #f1008b;
+  background-color: #ffdff1;
+  color: #ff3366;
   padding: 3px 10px;
 }
 
 .info {
-  border: 1px solid #66CC00;
-  background-color: #F0FFC4;
-  color: #66CC00;
+  border: 1px solid #66cc00;
+  background-color: #f0ffc4;
+  color: #66cc00;
   padding: 3px 10px;
 }
 
@@ -968,7 +968,7 @@ table {
 .guestbook textarea {
   width: 100%;
   border: 1px solid #969696;
-  color: #3E3E3E;
+  color: #3e3e3e;
 }
 
 .guestbook input:hover,
@@ -978,8 +978,8 @@ table {
 }
 
 .gb_post {
-  background-color: #EAEAEA;
-  border: 1px solid #D3D3D3;
+  background-color: #eaeaea;
+  border: 1px solid #d3d3d3;
   padding: 3px;
   margin: 5px 0;
   position: relative;
@@ -987,12 +987,12 @@ table {
 
 .gb_subj {
   font-weight: bold;
-  border-bottom: 1px dashed #D3D3D3;
+  border-bottom: 1px dashed #d3d3d3;
 }
 
 .gb_date {
   font-style: italic;
-  color: #7F7F7F;
+  color: #7f7f7f;
   padding-left: 5px;
   font-weight: normal;
   float: right;
@@ -1000,7 +1000,7 @@ table {
 }
 
 .gb_author {
-  color: #FF3366;
+  color: #ff3366;
   padding-left: 20px;
   line-height: 20px;
   background-image: url(images/mail.png);
@@ -1022,15 +1022,15 @@ table {
 
 .gb_comment {
   background-color: transparent;
-  border: 1px dashed #D3D3D3;
+  border: 1px dashed #d3d3d3;
   padding: 3px;
   margin: 5px 0 5px 20px;
   position: relative;
 }
 
 .gb_nav a {
-  border: 1px solid #D3D3D3;
-  background-color: #E8E8E8;
+  border: 1px solid #d3d3d3;
+  background-color: #e8e8e8;
   text-decoration: none;
   padding: 1px;
   margin: 1px;
@@ -1038,12 +1038,12 @@ table {
 }
 
 .gb_nav a:hover {
-  color: #F1008B;
-  border-color: #F1008B;
+  color: #f1008b;
+  border-color: #f1008b;
 }
 
 .gb_nav a.current {
   font-weight: bold;
-  color: #F1008B;
-  border-color: #F1008B;
+  color: #f1008b;
+  border-color: #f1008b;
 }
