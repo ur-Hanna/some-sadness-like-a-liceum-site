@@ -74,7 +74,7 @@ a:focus {
   transition: color, background, 150ms linear;
 }
 
-li {
+ul>li {
   list-style: none;
 }
 
@@ -312,8 +312,7 @@ table {
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
-  .site--quote {
-  }
+  .site--quote {}
 }
 
 /* СТИЛІ ДЛЯ КОНТАКТІВ, АДРЕСИ ТА СКРИПТА ДАТИ ТА ЧАСУ */
@@ -400,6 +399,7 @@ table {
 
 /* phone */
 @media screen and (min-width: 320px) {
+
   .address,
   .contacts {
     display: none;
@@ -417,6 +417,7 @@ table {
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
+
   .address,
   .contacts {
     display: flex;
@@ -428,9 +429,9 @@ table {
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
+
   .address,
-  .contacts {
-  }
+  .contacts {}
 }
 
 .address p,
@@ -439,19 +440,16 @@ table {
   padding: 9px;
 }
 
-.contacts__tel {
-}
+.contacts__tel {}
 
-.contacts__mail {
-}
+.contacts__mail {}
 
 .contacts__mail-link,
 .contacts__tel-link {
   color: #486aaa;
 }
 
-.contacts__facebook {
-}
+.contacts__facebook {}
 
 .contacts__facebook-link {
   display: inline-flex;
@@ -473,8 +471,7 @@ table {
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .date-and-time {
-  }
+  .date-and-time {}
 }
 
 /* desktop 1024 */
@@ -530,8 +527,7 @@ table {
   gap: 15px;
 }
 
-.top-menu__item {
-}
+.top-menu__item {}
 
 .top-menu__link {
   display: inline-block;
@@ -582,13 +578,13 @@ table {
 /* ------------------------------------------------------------------------- */
 /* СТИЛІ КОНТЕНТУ */
 #content {
-  display: flex;
   background: var(--light-color);
 }
 
 /* phone */
 @media screen and (min-width: 320px) {
   #content {
+    display: flex;
     flex-direction: column;
     padding: 7px;
   }
@@ -605,6 +601,7 @@ table {
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
   #content {
+    display: block;
     padding: 20px;
   }
 }
@@ -644,8 +641,7 @@ table {
   }
 }
 
-.navigation {
-}
+.navigation {}
 
 .navigation__title {
   font-size: 17px;
@@ -661,8 +657,7 @@ table {
   border-radius: 4px;
 }
 
-.navigation__list {
-}
+.navigation__list {}
 
 .navigation__item {
   padding: 5px;
@@ -720,7 +715,7 @@ table {
 /* tablet 768 */
 @media screen and (min-width: 768px) {
   .main-content {
-    max-width: 518px;
+    max-width: 517px;
     font-size: 12px;
   }
 }
