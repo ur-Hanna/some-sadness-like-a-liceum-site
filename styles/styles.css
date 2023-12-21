@@ -2,8 +2,9 @@
   --dark-color: #2f2f2f;
   --light-color: #f6f6f6;
   --blue-accent: #244d99;
-  --yellow-accent: #ffe365;
-  --link-color: #fec72c;
+  --pink-accent: #993366;
+  --link-color: #486aaa;
+  --link-hover: #fec72c;
 }
 
 /* СКИДАННЯ СТИЛІВ */
@@ -48,19 +49,19 @@ img {
 }
 
 /* phone */
-/* @media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
   img {
     width: 100% !important;
     height: auto !important;
   }
-} */
+}
 
 /* tablet 768 */
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   img {
-    max-width: 75% !important;
+    max-width: 800px !important;
   }
-} */
+}
 
 a {
   text-decoration: none;
@@ -70,7 +71,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--link-hover);
   transition: color, background, 150ms linear;
 }
 
@@ -214,7 +215,7 @@ table {
 @media screen and (min-width: 320px) {
   .site--pretitle {
     font-size: 27px;
-    text-shadow: 1px 1px 2px #486aaa;
+    text-shadow: 1px 1px 2px var(--link-color);
   }
 }
 
@@ -230,7 +231,7 @@ table {
   .site--pretitle {
     padding: 0 0 0 15px;
     font-size: 47px;
-    text-shadow: 2px 2px 2px #486aaa;
+    text-shadow: 2px 2px 2px var(--link-color);
   }
 }
 
@@ -247,7 +248,7 @@ table {
   line-height: 1.3;
   text-transform: none;
   /* display: inline-flex; */
-  color: #486aaa;
+  color: var(--link-color);
   text-shadow: none;
 }
 
@@ -394,7 +395,7 @@ table {
   font-weight: 600;
   line-height: 0.4;
   font-style: inherit;
-  color: #486aaa;
+  color: var(--link-color);
 }
 
 /* phone */
@@ -446,7 +447,7 @@ table {
 
 .contacts__mail-link,
 .contacts__tel-link {
-  color: #486aaa;
+  color: var(--link-color);
 }
 
 .contacts__facebook {}
@@ -494,7 +495,7 @@ table {
   position: sticky;
   top: 0;
 
-  background: #486aaa;
+  background: var(--link-color);
   background-size: 100%;
   border: none;
 }
@@ -552,7 +553,7 @@ table {
   opacity: 0;
   width: 100%;
   height: 5px;
-  background-color: var(--link-color);
+  background-color: var(--link-hover);
   border-radius: 1px;
   transition: opacity 150ms linear;
 }
@@ -565,7 +566,7 @@ table {
   opacity: 0;
   width: 100%;
   height: 5px;
-  background-color: var(--link-color);
+  background-color: var(--link-hover);
   border-radius: 1px;
   transition: opacity 150ms linear;
 }
@@ -651,7 +652,7 @@ table {
   text-align: center;
   padding: 3px 10px;
   margin-bottom: 5px;
-  background-color: #486aaa;
+  background-color: var(--link-color);
   color: var(--light-color);
   border: none;
   border-radius: 4px;
@@ -673,7 +674,7 @@ table {
 
 .navigation__link:hover,
 .navigation__link:focus {
-  color: var(--link-color);
+  color: var(--link-hover);
 }
 
 .navigation__list--is-hidden {
@@ -750,7 +751,7 @@ table {
   flex-direction: column;
   align-items: center;
   padding: 10px 15px;
-  background-color: #486aaa;
+  background-color: var(--link-color);
   color: var(--light-color);
 }
 
@@ -860,7 +861,7 @@ table {
 
 #footer a:hover,
 #footer a:focus {
-  color: var(--link-color);
+  color: var(--link-hover);
 }
 
 .footer__address {
