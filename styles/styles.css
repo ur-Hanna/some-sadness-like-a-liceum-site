@@ -101,7 +101,6 @@ table {
 @media screen and (min-width: 320px) {
   iframe {
     max-width: 300px !important;
-    height: auto !important;
   }
 }
 
