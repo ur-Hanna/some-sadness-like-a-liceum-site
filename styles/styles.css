@@ -79,7 +79,7 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--blue-accent);
+  color: var(--link-color);
 }
 
 a:hover,
