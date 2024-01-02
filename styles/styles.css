@@ -1,9 +1,9 @@
 :root {
   --dark-color: #2f2f2f;
   --light-color: #f6f6f6;
-  --blue-accent: #244d99;
+  --blue-accent: #486aaa;
   --pink-accent: #993366;
-  --link-color: #486aaa;
+  --link-color: #244d99;
   --link-hover: #fec72c;
 }
 
@@ -250,14 +250,14 @@ table {
   font-weight: 600;
   text-transform: uppercase;
   line-height: normal;
-  color: var(--blue-accent);
+  color: var(--link-color);
 }
 
 /* phone */
 @media screen and (min-width: 320px) {
   .site--pretitle {
     font-size: 27px;
-    text-shadow: 1px 1px 2px var(--link-color);
+    text-shadow: 1px 1px 2px var(--blue-accent);
   }
 }
 
@@ -273,7 +273,7 @@ table {
   .site--pretitle {
     padding: 0 0 0 15px;
     font-size: 47px;
-    text-shadow: 2px 2px 2px var(--link-color);
+    text-shadow: 2px 2px 2px var(--blue-accent);
   }
 }
 
@@ -290,7 +290,7 @@ table {
   line-height: 1.3;
   text-transform: none;
   /* display: inline-flex; */
-  color: var(--link-color);
+  color: var(--blue-accent);
   text-shadow: none;
 }
 
@@ -437,7 +437,7 @@ table {
   font-weight: 600;
   line-height: 0.4;
   font-style: inherit;
-  color: var(--link-color);
+  /* color: var(--link-color); */
 }
 
 /* phone */
@@ -537,7 +537,7 @@ table {
   position: sticky;
   top: 0;
 
-  background: var(--link-color);
+  background: var(--blue-accent);
   background-size: 100%;
   border: none;
 }
@@ -694,7 +694,7 @@ table {
   text-align: center;
   padding: 3px 10px;
   margin-bottom: 5px;
-  background-color: var(--link-color);
+  background-color: var(--blue-accent);
   color: var(--light-color);
   border: none;
   border-radius: 4px;
@@ -710,7 +710,7 @@ table {
   display: block;
   font-weight: 400;
   font-size: 15px;
-  color: var(--blue-accent);
+  color: var(--link-color);
   border-bottom: 1px dotted var(--blue-accent);
 }
 
@@ -793,7 +793,7 @@ table {
   flex-direction: column;
   align-items: center;
   padding: 10px 15px;
-  background-color: var(--link-color);
+  background-color: var(--blue-accent);
   color: var(--light-color);
 }
 
