@@ -101,3 +101,6 @@ table 4*7
 лапки &laquo; | &raquo; \ &quot;
 пробіл &nbsp;
 тире &ndash;
+
+
+<p style="text-align: center;"><span style="font-size: x-large;">Ми працюємо над розробкою даної сторінки 🔧</span></p>
