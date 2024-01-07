@@ -540,6 +540,8 @@ table {
 .top-menu {
   position: sticky;
   top: 0;
+  padding-left: 5px;
+  padding-right: 5px;
 
   background: var(--blue-accent);
   background-size: 100%;
@@ -577,7 +579,8 @@ table {
 .top-menu__item {}
 
 .top-menu__link {
-  display: inline-block;
+  display: block;
+  /* was inline-block */
   position: relative;
   padding: 7px 0;
   text-decoration: none;
@@ -621,6 +624,31 @@ table {
 .top-menu__link:hover::after {
   opacity: 1;
 }
+
+/* СТИЛІ ПРИХОВАНОГО ВЕРХНЬОГО СПИСКУ */
+.top-menu__sublist {
+  max-width: 320px;
+  padding: 5px;
+  /* height: fit-content; */
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.top-menu__item .top-menu__sublist {
+  position: absolute;
+  display: none;
+}
+
+.top-menu__item:hover>.top-menu__sublist,
+.top-menu__item:focus>.top-menu__sublist {
+  display: block;
+}
+
+.top-menu__subitem {
+  border-bottom: 1px dotted var(--blue-accent);
+}
+
+.top-menu__sublink {}
 
 /* ------------------------------------------------------------------------- */
 /* СТИЛІ КОНТЕНТУ */
@@ -1029,7 +1057,7 @@ table {
 
 .gb_subj {
   font-weight: bold;
-  border-bottom: 1px dashed #d3d3d3;
+  border-bottom: 1px dotted var(--blue-accent);
 }
 
 .gb_date {
