@@ -5,6 +5,8 @@
   --pink-accent: #993366;
   --link-color: #244d99;
   --link-hover: #fec72c;
+  --quote: #f47236;
+  --facebook-color: #1877f2;
 }
 
 /* СКИДАННЯ СТИЛІВ */
@@ -15,7 +17,7 @@
 }
 
 body {
-  font-family: "Verdana", "Tahoma", sans-serif;
+  font-family: "Verdana", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.4;
@@ -48,7 +50,7 @@ img {
   border: none;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   img {
     max-width: 300px !important;
@@ -89,22 +91,23 @@ a:focus {
   transition: color, background, 150ms linear;
 }
 
-ol {
+ol>li {
   list-style-type: decimal;
 }
 
 ul>li {
-  list-style: none;
+  list-style-type: none;
 }
 
 table {
   width: 100%;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   iframe {
     max-width: 300px !important;
+    /* height: auto !important; */
   }
 }
 
@@ -134,7 +137,7 @@ table {
   margin: 0 auto;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   #wrap {
     max-width: 480px;
@@ -171,14 +174,13 @@ table {
   justify-content: space-between;
   align-items: center;
   width: auto;
-  /* min-height: 140px; */
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .header {
+    padding: 12px;
     flex-direction: column;
-    padding: 10px;
     background-color: var(--light-color);
   }
 }
@@ -186,7 +188,7 @@ table {
 /* tablet 768 */
 @media screen and (min-width: 768px) {
   .header {
-    padding: 15px;
+    padding: 16px;
   }
 }
 
@@ -194,14 +196,29 @@ table {
 @media screen and (min-width: 1024px) {
   .header {
     flex-direction: row;
-    padding: 15px 30px;
-    background: url("../../../../../../media/liceum-emblem.jpg") no-repeat, var(--light-color);
-    background-size: contain;
-    background-position: 30px 2px;
+    padding: 20px;
   }
 }
 
-/* phone */
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 24px;
+    background-position: 16px 2px;
+  }
+}
+
+/* СТИЛІ ЛІВОЇ ЧАСТИНИ ХЕДЕРА */
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .header__img--wrap {
+    background-image: url("../../../../../../media/liceum-emblem.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .site-title__wrap {
     display: flex;
@@ -222,7 +239,7 @@ table {
 @media screen and (min-width: 1024px) {
   .site-title__wrap {
     width: 300px;
-    margin-left: 160px;
+    margin-left: 136px;
   }
 }
 
@@ -233,7 +250,8 @@ table {
   }
 }
 
-/* phone */
+/* НАЗВА ЗАКЛАДУ */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .site-title {
     display: flex;
@@ -257,7 +275,7 @@ table {
   color: var(--link-color);
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .site--pretitle {
     font-size: 27px;
@@ -289,16 +307,15 @@ table {
 }
 
 .site--aftertitle {
-  font-family: "Verdana", "Tahoma", sans-serif;
+  font-family: "Verdana", sans-serif;
   font-weight: 600;
   line-height: 1.3;
   text-transform: none;
-  /* display: inline-flex; */
   color: var(--blue-accent);
   text-shadow: none;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .site--aftertitle {
     font-size: 15px;
@@ -327,14 +344,15 @@ table {
   }
 }
 
+/* ДЕВІЗ ЗАКЛАДУ */
 .site--quote {
   margin: 0;
   font-weight: 600;
-  color: #f47236;
+  color: var(--quote);
   text-align: left;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .site--quote {
     display: none;
@@ -352,22 +370,16 @@ table {
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
   .site--quote {
-    padding-left: 12px;
+    padding-left: 15px;
     text-align: left;
   }
 }
 
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .site--quote {}
-}
-
-/* СТИЛІ ДЛЯ КОНТАКТІВ, АДРЕСИ ТА СКРИПТА ДАТИ ТА ЧАСУ */
-/* phone */
+/* СТИЛІ ПРАВОЇ ЧАСТИНИ ХЕДЕРА */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .contacts-n-date__wrap {
     display: none;
-    /* max-width: 480px; */
   }
 }
 
@@ -396,12 +408,13 @@ table {
   }
 }
 
+/* КОНТАКТИ ТА АДРЕСА */
 .contacts__wrap {
   column-gap: 30px;
   justify-content: space-between;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .contacts__wrap {
     display: none;
@@ -434,17 +447,15 @@ table {
 
 .address,
 .contacts {
-  /* width: max-content; */
   margin: 0;
-  font-family: "Verdana", "Tahoma", sans-serif;
+  font-family: "Verdana", sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: 0.4;
   font-style: inherit;
-  /* color: var(--link-color); */
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
 
   .address,
@@ -474,57 +485,38 @@ table {
   }
 }
 
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-
-  .address,
-  .contacts {}
-}
-
 .address p,
 .contacts p {
   margin: 0;
   padding: 9px;
 }
 
-.contacts__tel {}
-
-.contacts__mail {}
+/* .contacts__tel {}
+.contacts__mail {} */
 
 .contacts__mail-link,
 .contacts__tel-link {
   color: var(--link-color);
 }
 
-.contacts__facebook {}
+/* .contacts__facebook {} */
 
 .contacts__facebook-link {
   display: inline-flex;
   align-items: center;
-  color: #1877f2;
+  color: var(--facebook-color);
 }
 
+/* СКРИПТ ДАТИ ТА ЧАСУ */
 .date-and-time {
   font-size: 14px;
   color: var(--dark-color);
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .date-and-time {
     display: none;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .date-and-time {}
-}
-
-/* desktop 1024 */
-@media screen and (min-width: 1024px) {
-  .date-and-time {
-    /* max-width: 1000px; */
   }
 }
 
@@ -532,23 +524,20 @@ table {
 @media screen and (min-width: 1440px) {
   .date-and-time {
     display: block;
-    /* max-width: 1280px; */
   }
 }
 
 /* СТИЛІ МЕНЮ ВГОРІ*/
 .top-menu {
   position: sticky;
-  top: 0;
-  padding-left: 5px;
-  padding-right: 5px;
-
+  top: -1px;
+  padding: 0 4px;
   background: var(--blue-accent);
   background-size: 100%;
   border: none;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .top-menu {
     line-height: 1;
@@ -576,34 +565,56 @@ table {
   gap: 15px;
 }
 
-.top-menu__item {}
+.top-menu__item {
+  position: relative;
+}
 
 .top-menu__link {
   display: block;
-  /* was inline-block */
   position: relative;
-  padding: 7px 0;
+  padding: 8px 0;
   text-decoration: none;
-  font-size: 17px;
+
   color: var(--light-color);
+}
+
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .top-menu__link {
+    font-size: 17px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .top-menu__link {
+    font-size: 16px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .top-menu__link {
+    font-size: 18px;
+  }
 }
 
 .top-menu__link:hover,
 .top-menu__link:focus {
   color: var(--light-color);
-  border-radius: 3px;
 }
 
 .top-menu__link::before {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   display: block;
   opacity: 0;
   width: 100%;
-  height: 5px;
+  height: 4px;
   background-color: var(--link-hover);
-  border-radius: 1px;
+  border-radius: 4px;
   transition: opacity 150ms linear;
 }
 
@@ -611,12 +622,13 @@ table {
   content: "";
   position: absolute;
   bottom: 0;
+  left: 0;
   display: block;
   opacity: 0;
   width: 100%;
-  height: 5px;
+  height: 4px;
   background-color: var(--link-hover);
-  border-radius: 1px;
+  border-radius: 4px;
   transition: opacity 150ms linear;
 }
 
@@ -627,11 +639,10 @@ table {
 
 /* СТИЛІ ПРИХОВАНОГО ВЕРХНЬОГО СПИСКУ */
 .top-menu__sublist {
-  max-width: 320px;
-  padding: 5px;
-  /* height: fit-content; */
+  top: 100%;
   background-color: var(--light-color);
   color: var(--dark-color);
+  font-weight: bold;
 }
 
 .top-menu__item .top-menu__sublist {
@@ -639,29 +650,66 @@ table {
   display: none;
 }
 
-.top-menu__item:hover>.top-menu__sublist,
-.top-menu__item:focus>.top-menu__sublist {
+.top-menu__item:hover>.top-menu__sublist {
   display: block;
+  z-index: 2;
+  border: var(--blue-accent) 2px dotted;
+}
+
+/* ТУТ СТИЛІ САБЛІСТА МІНЯЮТЬСЯ */
+
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .top-menu__item:hover>.top-menu__sublist {
+    width: 250px;
+    padding: 3px;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .top-menu__item:hover>.top-menu__sublist {
+    width: 300px;
+    transform: translateX(-60%);
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .top-menu__item:hover>.top-menu__sublist {
+    width: 350px;
+    padding: 5px;
+    transform: translateX(-55%);
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .top-menu__item:hover>.top-menu__sublist {
+    transform: translateX(0);
+  }
 }
 
 .top-menu__subitem {
-  border-bottom: 1px dotted var(--blue-accent);
+  border-bottom: var(--blue-accent) 1px dotted;
+  min-height: 24px;
 }
 
-.top-menu__sublink {}
+.top-menu__sublink {
+  display: block;
+}
 
-/* ------------------------------------------------------------------------- */
 /* СТИЛІ КОНТЕНТУ */
 #content {
+  display: flex;
   background: var(--light-color);
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   #content {
-    display: flex;
     flex-direction: column;
-    padding: 7px;
+    padding: 12px;
   }
 }
 
@@ -669,14 +717,14 @@ table {
 @media screen and (min-width: 768px) {
   #content {
     flex-direction: row;
-    padding: 15px;
+    justify-content: space-between;
+    padding: 16px;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
   #content {
-    display: block;
     padding: 20px;
   }
 }
@@ -684,21 +732,21 @@ table {
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
   #content {
-    padding: 30px;
+    padding: 24px;
   }
 }
 
-/* --------------------------------------- */
 /* СТИЛІ БЛОКУ НАВІГАЦІЇ */
 .sidebar {
-  float: left;
-  padding: 10px;
+  flex-shrink: 0;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .sidebar {
     width: 100%;
+    margin-bottom: 16px;
+    padding: 4px;
   }
 }
 
@@ -706,6 +754,7 @@ table {
 @media screen and (min-width: 768px) {
   .sidebar {
     width: 220px;
+    margin-bottom: 0;
   }
 }
 
@@ -713,35 +762,36 @@ table {
 @media screen and (min-width: 1024px) {
   .sidebar {
     width: 280px;
+    padding: 8px;
   }
 }
 
-.navigation {}
+/* .navigation {} */
 
 .navigation__title {
+  padding: 4px 8px;
+  margin-bottom: 4px;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   letter-spacing: 1px;
   text-align: center;
-  padding: 3px 10px;
-  margin-bottom: 5px;
   background-color: var(--blue-accent);
   color: var(--light-color);
   border: none;
   border-radius: 4px;
 }
 
-.navigation__list {}
+/* .navigation__list {} */
 
 .navigation__item {
-  padding: 5px;
+  padding: 4px;
 }
 
 .navigation__link {
   display: block;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--link-color);
   border-bottom: 1px dotted var(--blue-accent);
 }
@@ -751,21 +801,9 @@ table {
   color: var(--link-hover);
 }
 
-.navigation__list--is-hidden {
-  display: none;
-  z-index: -5;
-}
-
-.navigation__list--is-hidden:hover,
-.navigation__list--is-hidden:focus {
-  display: block;
-  z-index: 5;
-}
-
-/* -------------------------- */
 /* СТИЛІ ОБЛАСТІ ПОШУКУ*/
 .gsc-input-box {
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .gsc-search-button {
@@ -774,12 +812,11 @@ table {
 
 /* СТИЛІ КОНТЕНТУ ПО ЦЕНТРУ СТОРІНКИ */
 .main-content {
-  padding: 10px;
-  float: right;
+  padding: 4px;
   text-align: justify;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .main-content {
     width: auto;
@@ -790,7 +827,7 @@ table {
 /* tablet 768 */
 @media screen and (min-width: 768px) {
   .main-content {
-    max-width: 517px;
+    width: 100%;
     font-size: 12px;
   }
 }
@@ -798,49 +835,58 @@ table {
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
   .main-content {
-    max-width: 690px;
+    padding: 8px;
   }
 }
-
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .main-content {
-    max-width: 930px;
-  }
-}
-
-/* ------------------------------------ */
 
 .main-content__title {
-  margin-bottom: 17px;
+  margin-bottom: 8px;
   border-bottom: 1px dotted var(--blue-accent);
   letter-spacing: 1px;
 }
 
 /* .main-content__form {} deleted */
 
-/* footer */
+/* СТИЛІ ФУТЕРА */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 15px;
   background-color: var(--blue-accent);
   color: var(--light-color);
+}
+
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .footer {
+    padding: 8px;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 20px 16px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 24px;
+  }
 }
 
 .footer__info--wrap {
   display: flex;
   width: 100%;
-  justify-content: space-around;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .footer__info--wrap {
     flex-direction: column;
     text-align: center;
-    font-size: 10px;
   }
 }
 
@@ -848,48 +894,56 @@ table {
 @media screen and (min-width: 768px) {
   .footer__info--wrap {
     flex-direction: row;
+    justify-content: space-between;
     text-align: left;
-    font-size: 12px;
-  }
-}
-
-.footer__info--wrap:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-/* phone */
-@media screen and (min-width: 320px) {
-  .footer__info {
-    width: auto;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .footer__info {
-    width: 240px;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
+  .footer__info--wrap {
+    justify-content: space-evenly;
+  }
+}
+
+.footer__info--wrap:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* АДРЕСА, КОНТАКТИ В ФУТЕРІ */
+/* phone 320 */
+/* @media screen and (min-width: 320px) {
+  .footer__info {
+    width: auto;
+  }
+} */
+
+/* tablet 768 */
+/* @media screen and (min-width: 768px) {
+  .footer__info {
+    width: 240px;
+  }
+} */
+
+/* desktop 1024 */
+/* @media screen and (min-width: 1024px) {
   .footer__info {
     width: 310px;
   }
-}
+} */
 
 /* desktop L 1440 */
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .footer__info {
     width: 340px;
   }
-}
+} */
 
-.footer__info:not(:last-child) {
+/* .footer__info:not(:last-child) {
   margin-right: 5px;
-}
+} */
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .footer__info:not(:last-child) {
     margin-bottom: 7px;
@@ -908,24 +962,17 @@ table {
   margin: 0;
 }
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
   .footer__text {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
   .footer__text {
-    font-size: 12px;
-  }
-}
-
-/* desktop 1024 */
-@media screen and (min-width: 1024px) {
-  .footer__text {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -942,9 +989,8 @@ table {
   font-style: normal;
 }
 
-/* _______________________________________________ */
-/***** последние новости на главной *****/
-.last-news-date {
+/* ОСТАННІ НОВИНИ НА ГОЛОВНІЙ */
+/* .last-news-date {
   float: right;
   font-style: italic;
   color: #959595;
@@ -959,34 +1005,34 @@ table {
 
 .last-news-mess {
   margin-bottom: 10px;
-}
+} */
 
-/***** guestbook & feedback *****/
-.error {
+/* СТИЛІ ГОСТЬОВОЇ КНИГИ ТА ЗВОРОТНОГО ЗВ'ЯЗКУ */
+/* .error {
   border: 1px solid #f1008b;
   background-color: #ffdff1;
   color: #ff3366;
   padding: 3px 10px;
-}
+} */
 
-.info {
+/* .info {
   border: 1px solid #66cc00;
   background-color: #f0ffc4;
   color: #66cc00;
   padding: 3px 10px;
-}
+} */
 
-/****** форма ЗВОРОТНОГО ЗВ'ЯЗКУ ******/
-.feedback {
+/* ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ */
+/* .feedback {
   border: 0;
   width: 100%;
 }
 
 .feedback td {
   width: 32%;
-}
+} */
 
-.feedback input,
+/* .feedback input,
 .feedback textarea {
   width: 100%;
   border: 1px solid var(--blue-accent);
@@ -997,10 +1043,10 @@ table {
 .feedback textarea:hover {
   border-color: var(--blue-accent);
   color: var(--dark-color);
-}
+} */
 
-/****** оформление гостевой ******/
-#captcha {
+/* ОФОРМЛЕННЯ ГОСТЬОВОЇ */
+/* #captcha {
   background-color: #ffffff;
   border: 1px solid #244d99;
   display: inline;
@@ -1009,9 +1055,9 @@ table {
 
 #guestbook #captcha {
   margin: 0 0 -5px 0 !important;
-}
+} */
 
-.error {
+/* .error {
   border: 1px solid #f1008b;
   background-color: #ffdff1;
   color: #ff3366;
@@ -1116,4 +1162,4 @@ table {
   font-weight: bold;
   color: #f1008b;
   border-color: #f1008b;
-}
+} */
