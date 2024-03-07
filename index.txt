@@ -1,6 +1,6 @@
 Якщо мінімальна ширина в'юпорта * , то  максимальна ширина=*
 
-/* phone */
+/* phone 320 */
 @media screen and (min-width: 320px) {
    {
     max-width: 480px;
