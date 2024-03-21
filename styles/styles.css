@@ -637,6 +637,21 @@ table {
   opacity: 1;
 }
 
+/* трикутник біля айтемів у верхньому меню */
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .top-menu--triangle {
+    display: none;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .top-menu--triangle {
+    display: inline-block;
+  }
+}
+
 /* СТИЛІ ПРИХОВАНОГО ВЕРХНЬОГО СПИСКУ */
 .top-menu__sublist {
   top: 100%;
@@ -650,43 +665,30 @@ table {
   display: none;
 }
 
-.top-menu__item:hover>.top-menu__sublist {
-  display: block;
-  z-index: 2;
-  border: var(--blue-accent) 2px dotted;
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .top-menu__item:hover>.top-menu__sublist {
+    display: block;
+    z-index: 2;
+    border: var(--blue-accent) 2px dotted;
+  }
 }
 
 /* ТУТ СТИЛІ САБЛІСТА МІНЯЮТЬСЯ */
 
-/* phone 320 */
-@media screen and (min-width: 320px) {
-  .top-menu__item:hover>.top-menu__sublist {
-    width: 250px;
-    padding: 3px;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .top-menu__item:hover>.top-menu__sublist {
-    width: 300px;
-    transform: translateX(-60%);
-  }
-}
-
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
   .top-menu__item:hover>.top-menu__sublist {
-    width: 350px;
+    width: 280px;
     padding: 5px;
-    transform: translateX(-55%);
+    transform: translateX(0);
   }
 }
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
   .top-menu__item:hover>.top-menu__sublist {
-    transform: translateX(0);
+    width: 360px;
   }
 }
 
