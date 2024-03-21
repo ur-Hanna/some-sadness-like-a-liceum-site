@@ -1,6 +1,6 @@
 :root {
-  --dark-color: #2f2f2f;
-  --light-color: #f6f6f6;
+  --black: #2f2f2f;
+  --white: #f6f6f6;
   --blue-accent: #486aaa;
   --pink-accent: #993366;
   --link-color: #244d99;
@@ -22,7 +22,7 @@ body {
   font-size: 15px;
   line-height: 1.4;
   font-style: normal;
-  color: var(--dark-color);
+  color: var(--black);
   padding: 0;
   margin: 0;
   background-color: #f0e1d1;
@@ -31,7 +31,7 @@ body {
 p {
   padding: 0px;
   margin: 8px 0px;
-  color: var(--dark-color);
+  color: var(--black);
 }
 
 h1,
@@ -42,7 +42,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  color: var(--dark-color);
+  color: var(--black);
 }
 
 img {
@@ -181,7 +181,7 @@ table {
   .header {
     padding: 12px;
     flex-direction: column;
-    background-color: var(--light-color);
+    background-color: var(--white);
   }
 }
 
@@ -510,7 +510,7 @@ table {
 /* СКРИПТ ДАТИ ТА ЧАСУ */
 .date-and-time {
   font-size: 14px;
-  color: var(--dark-color);
+  color: var(--black);
 }
 
 /* phone 320 */
@@ -575,7 +575,7 @@ table {
   padding: 8px 0;
   text-decoration: none;
 
-  color: var(--light-color);
+  color: var(--white);
 }
 
 /* phone 320 */
@@ -601,7 +601,7 @@ table {
 
 .top-menu__link:hover,
 .top-menu__link:focus {
-  color: var(--light-color);
+  color: var(--white);
 }
 
 .top-menu__link::before {
@@ -640,8 +640,8 @@ table {
 /* СТИЛІ ПРИХОВАНОГО ВЕРХНЬОГО СПИСКУ */
 .top-menu__sublist {
   top: 100%;
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  background-color: var(--white);
+  color: var(--black);
   font-weight: bold;
 }
 
@@ -702,7 +702,7 @@ table {
 /* СТИЛІ КОНТЕНТУ */
 #content {
   display: flex;
-  background: var(--light-color);
+  background: var(--white);
 }
 
 /* phone 320 */
@@ -777,7 +777,7 @@ table {
   letter-spacing: 1px;
   text-align: center;
   background-color: var(--blue-accent);
-  color: var(--light-color);
+  color: var(--white);
   border: none;
   border-radius: 4px;
 }
@@ -853,7 +853,7 @@ table {
   flex-direction: column;
   align-items: center;
   background-color: var(--blue-accent);
-  color: var(--light-color);
+  color: var(--white);
 }
 
 /* phone 320 */
@@ -958,7 +958,7 @@ table {
 }
 
 .footer__text {
-  color: var(--light-color);
+  color: var(--white);
   margin: 0;
 }
 
@@ -977,7 +977,7 @@ table {
 }
 
 #footer a {
-  color: var(--light-color);
+  color: var(--white);
 }
 
 #footer a:hover,
@@ -1036,13 +1036,13 @@ table {
 .feedback textarea {
   width: 100%;
   border: 1px solid var(--blue-accent);
-  color: var(--dark-color);
+  color: var(--black);
 }
 
 .feedback input:hover,
 .feedback textarea:hover {
   border-color: var(--blue-accent);
-  color: var(--dark-color);
+  color: var(--black);
 } */
 
 /* ОФОРМЛЕННЯ ГОСТЬОВОЇ */
