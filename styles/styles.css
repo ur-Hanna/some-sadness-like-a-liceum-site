@@ -528,7 +528,7 @@ table {
 }
 
 /* СТИЛІ МЕНЮ ВГОРІ*/
-.top-menu {
+.top-nav {
   position: sticky;
   top: -1px;
   padding: 0 4px;
@@ -539,37 +539,37 @@ table {
 
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .top-menu {
+  .top-nav {
     line-height: 1;
   }
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .top-menu {
+  .top-nav {
     line-height: 1.2;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .top-menu {
+  .top-nav {
     line-height: 1.4;
   }
 }
 
-.top-menu__list {
+.top-nav__list {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-.top-menu__item {
+.top-nav__item {
   position: relative;
 }
 
-.top-menu__link {
+.top-nav__link {
   display: block;
   position: relative;
   padding: 8px 0;
@@ -580,31 +580,31 @@ table {
 
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .top-menu__link {
+  .top-nav__link {
     font-size: 17px;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .top-menu__link {
+  .top-nav__link {
     font-size: 16px;
   }
 }
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
-  .top-menu__link {
+  .top-nav__link {
     font-size: 18px;
   }
 }
 
-.top-menu__link:hover,
-.top-menu__link:focus {
+.top-nav__link:hover,
+.top-nav__link:focus {
   color: var(--white);
 }
 
-.top-menu__link::before {
+.top-nav__link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -618,7 +618,7 @@ table {
   transition: opacity 150ms linear;
 }
 
-.top-menu__link::after {
+.top-nav__link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -632,42 +632,42 @@ table {
   transition: opacity 150ms linear;
 }
 
-.top-menu__link:hover::before,
-.top-menu__link:hover::after {
+.top-nav__link:hover::before,
+.top-nav__link:hover::after {
   opacity: 1;
 }
 
 /* трикутник біля айтемів у верхньому меню */
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .top-menu--triangle {
+  .top-nav--triangle {
     display: none;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .top-menu--triangle {
+  .top-nav--triangle {
     display: inline-block;
   }
 }
 
 /* СТИЛІ ПРИХОВАНОГО ВЕРХНЬОГО СПИСКУ */
-.top-menu__sublist {
+.top-nav__sublist {
   top: 100%;
   background-color: var(--white);
   color: var(--black);
   font-weight: bold;
 }
 
-.top-menu__item .top-menu__sublist {
+.top-nav__item .top-nav__sublist {
   position: absolute;
   display: none;
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .top-menu__item:hover>.top-menu__sublist {
+  .top-nav__item:hover>.top-nav__sublist {
     display: block;
     z-index: 2;
     border: var(--blue-accent) 2px dotted;
@@ -678,7 +678,7 @@ table {
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .top-menu__item:hover>.top-menu__sublist {
+  .top-nav__item:hover>.top-nav__sublist {
     width: 280px;
     padding: 5px;
     transform: translateX(0);
@@ -687,18 +687,18 @@ table {
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
-  .top-menu__item:hover>.top-menu__sublist {
+  .top-nav__item:hover>.top-nav__sublist {
     width: 360px;
   }
 }
 
-.top-menu__subitem {
+.top-nav__subitem {
   border-bottom: var(--blue-accent) 1px dotted;
   min-height: 24px;
 }
 
-.top-menu__sublink {
   display: block;
+  .top-nav__sublink {
 }
 
 /* СТИЛІ КОНТЕНТУ */
