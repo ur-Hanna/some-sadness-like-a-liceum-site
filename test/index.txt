@@ -1,0 +1,107 @@
+Якщо мінімальна ширина в'юпорта * , то  максимальна ширина контейнера =*
+
+/* phone 320 */
+@media screen and (min-width: 320px) {
+   {
+    max-width: 480px;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+   {
+    max-width: 768px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+   {
+    max-width: 1000px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+   {
+    max-width: 1280px;
+  }
+}
+
+
+Підключення листка стилів у хтмл
+<link rel="stylesheet" href="./styles/styles.css">
+
+Емоджі з сайту
+👉👈🔧💙💛📞📧🔗📚🔐🏫📅
+🔠🧘👩‍👧‍👦👩‍🏫💻⚛️🧭📃🔎🧵⚽🏃🔢🧪📖🎨🎵🧬
+
+<h3><span style="font-size: medium;"><span style="color: #993366;">Class</span></span></h3>
+<hr />
+
+
+<!-- тест -->
+<marquee behavior="scroll" direction="left" loop="-1" width="100%">
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-1.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-2.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-3.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-4.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-5.jpg" width="400" alt="" /></a>
+  <a href="../../../../../../media/med-1.jpg"><img src="../../../../../../media/med-6.jpg" width="400" alt="" /></a>
+</marquee>
+
+table 4*7
+<table style="width: 100%; font-size: small;" cellspacing="0">
+  <thead style="width: 100%; text-align: center;">
+    <th style="width: 13%; padding: 5px; border: 1px solid;"></th>
+    <th style="width: 15%; padding: 5px; border: 1px solid; border-left: none;"></th>
+    <th style="width: 40%; padding: 5px; border: 1px solid; border-left: none;"></th>
+    <th style="width: 32%; padding: 5px; border: 1px solid; border-left: none;"></th>
+  </thead>
+  <tbody style="width: 100%; text-align: left;">
+    <tr>
+      <td style="width: 13%; padding: 5px; border: 1px solid; border-top: none;"></td>
+      <td style="width: 15%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 40%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 32%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+    </tr>
+    <tr>
+      <td style="width: 13%; padding: 5px; border: 1px solid; border-top: none;"></td>
+      <td style="width: 15%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 40%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 32%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+    </tr>
+    <tr>
+      <td style="width: 13%; padding: 5px; border: 1px solid; border-top: none;"></td>
+      <td style="width: 15%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 40%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 32%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+    </tr>
+    <tr>
+      <td style="width: 13%; padding: 5px; border: 1px solid; border-top: none;"></td>
+      <td style="width: 15%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 40%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 32%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+    </tr>
+    <tr>
+      <td style="width: 13%; padding: 5px; border: 1px solid; border-top: none;"></td>
+      <td style="width: 15%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 40%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 32%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+    </tr>
+    <tr>
+      <td style="width: 13%; padding: 5px; border: 1px solid; border-top: none;"></td>
+      <td style="width: 15%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 40%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+      <td style="width: 32%; padding: 5px; border: 1px solid; border-left: none; border-top: none;"></td>
+    </tr>
+  </tbody>
+</table>
+
+апостроф &rsquo;
+лапки &laquo; | &raquo; \ &quot;
+пробіл &nbsp;
+тире &ndash;
+
+
+<p style="text-align: center;"><span style="font-size: x-large;">Ми працюємо над розробкою даної сторінки 🔧</span></p>
