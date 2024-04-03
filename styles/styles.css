@@ -99,8 +99,34 @@ ul>li {
   list-style-type: none;
 }
 
+.gsc-search-box th,
+.gsc-search-box td {
+  border: none;
+}
+
 table {
   width: 100%;
+  color: inherit;
+  font-size: small;
+}
+
+table th,
+table td {
+  border: 1px var(--black) solid;
+  padding: 4px;
+}
+
+table th:not(:first-child) {
+  border-left: none;
+}
+
+table td:first-child {
+  border-top: none;
+}
+
+table td:not(:first-child) {
+  border-top: none;
+  border-left: none;
 }
 
 /* phone 320 */
