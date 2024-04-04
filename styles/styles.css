@@ -197,9 +197,7 @@ table td:not(:first-child) {
 /* СТИЛІ ХЕДЕРА */
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
+  width: 100%;
 }
 
 /* phone 320 */
@@ -222,80 +220,81 @@ table td:not(:first-child) {
 @media screen and (min-width: 1024px) {
   .header {
     flex-direction: row;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 16px 20px;
   }
 }
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
   .header {
-    padding: 24px;
-    background-position: 16px 2px;
+    padding: 16px 24px;
   }
 }
 
 /* СТИЛІ ЛІВОЇ ЧАСТИНИ ХЕДЕРА */
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .header__img--wrap {
-    background-image: url("../../../../../../media/liceum-emblem.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  .header__wrap--left {
+    display: flex;
+    align-items: center;
   }
 }
 
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .site-title__wrap {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 0;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .site-title__wrap {
-    width: 750px;
+  .header__img--wrap {
+    display: none;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .site-title__wrap {
-    width: 300px;
-    margin-left: 136px;
+  .header__img--wrap {
+    display: inline-flex;
+    margin-right: 4px;
   }
 }
 
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .site-title__wrap {
-    width: 440px;
-  }
-}
-
-/* НАЗВА ЗАКЛАДУ */
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .site-title {
-    display: flex;
-    flex-direction: column;
+  .header__img {
+    display: none;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .header__img {
+    display: inline-block;
+    min-width: 100px;
+  }
+}
+
+.header__title--wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .header__title--wrap {
     text-align: center;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .site-title {
+  .header__title--wrap {
     text-align: left;
   }
 }
 
-.site--pretitle {
-  font-family: "Lucida Bright", "Times New Roman", serif;
-  font-weight: 600;
+/* НАЗВА ЗАКЛАДУ */
+.site__title {
+  font-family: "Lucida Bright", serif;
+  font-weight: var(--bold-font);
   text-transform: uppercase;
   line-height: normal;
   color: var(--link-color);
@@ -303,38 +302,29 @@ table td:not(:first-child) {
 
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .site--pretitle {
-    font-size: 27px;
+  .site__title {
+    font-size: 24px;
     text-shadow: 1px 1px 2px var(--blue-accent);
   }
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .site--pretitle {
-    font-size: 37px;
+  .site__title {
+    font-size: 36px;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .site--pretitle {
-    padding: 0 0 0 15px;
-    font-size: 47px;
+  .site__title {
     text-shadow: 2px 2px 2px var(--blue-accent);
   }
 }
 
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .site--pretitle {
-    font-size: 57px;
-  }
-}
-
-.site--aftertitle {
-  font-family: "Verdana", sans-serif;
-  font-weight: 600;
+.site__aftertitle {
+  font-family: inherit;
+  font-weight: var(--bold-font);
   line-height: 1.3;
   text-transform: none;
   color: var(--blue-accent);
@@ -343,213 +333,185 @@ table td:not(:first-child) {
 
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .site--aftertitle {
+  .site__aftertitle {
     font-size: 15px;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .site--aftertitle {
-    font-size: 17px;
-  }
-}
-
-/* desktop 1024 */
-@media screen and (min-width: 1024px) {
-  .site--aftertitle {
-    padding: 0 0 0 15px;
-    font-size: 15px;
-  }
-}
-
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .site--aftertitle {
-    font-size: 19px;
-  }
-}
-
-/* ДЕВІЗ ЗАКЛАДУ */
-.site--quote {
-  margin: 0;
-  font-weight: 600;
-  color: var(--quote);
-  text-align: left;
-}
-
-/* phone 320 */
-@media screen and (min-width: 320px) {
-  .site--quote {
     display: none;
   }
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .site--quote {
-    display: block;
-    text-align: center;
+  .site__aftertitle {
+    font-size: 17px;
+    display: inline-block;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .site--quote {
-    padding-left: 15px;
-    text-align: left;
+  .site__aftertitle {
+    font-size: 12px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .site__aftertitle {
+    font-size: 16px;
   }
 }
 
 /* СТИЛІ ПРАВОЇ ЧАСТИНИ ХЕДЕРА */
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .contacts-n-date__wrap {
+  .header__wrap--right {
     display: none;
   }
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .contacts-n-date__wrap {
+  .header__wrap--right {
     display: flex;
     justify-content: center;
-    width: 700px;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .contacts-n-date__wrap {
-    width: 500px;
+  .header__wrap--right {
     flex-direction: column;
-    align-items: flex-end;
-  }
-}
-
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .contacts-n-date__wrap {
-    width: 540px;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
 /* КОНТАКТИ ТА АДРЕСА */
-.contacts__wrap {
-  column-gap: 30px;
-  justify-content: space-between;
-}
-
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .contacts__wrap {
+  .header__contacts--wrap {
     display: none;
   }
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .contacts__wrap {
+  .header__contacts--wrap {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 12px;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .contacts__wrap {
+  .header__contacts--wrap {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .header__contacts {
+    margin-right: 20px;
+  }
+}
+
+/* phone 320 */
+@media screen and (min-width: 320px) {
+
+  .header__address,
+  .header__contacts {
+    display: none;
+    /* font-family: "Verdana", sans-serif; */
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .header__contacts {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 12px;
+    font-weight: var(--bold-font);
+    line-height: 0.4;
+    font-style: inherit;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .header__address {
+    display: flex;
     flex-direction: column;
-    width: 280px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    font-size: 12px;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: 0.4;
+
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .header__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: inherit;
+    width: auto;
   }
 }
 
 /* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .contacts__wrap {
-    flex-direction: row;
-    width: 540px;
-    margin-bottom: 15px;
-  }
-}
+/* @media screen and (min-width: 1440px) {
+  .header__address,
+  .header__contacts {
+    font-size: 14px;}} */
 
-.address,
-.contacts {
+.header__address p,
+.header__contacts p {
   margin: 0;
-  font-family: "Verdana", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 0.4;
-  font-style: inherit;
+  padding: 8px 0;
 }
 
-/* phone 320 */
-@media screen and (min-width: 320px) {
+/* .header__contacts--tel {}
+.header__contacts--mail {} */
 
-  .address,
-  .contacts {
-    display: none;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-/* desktop 1024 */
-@media screen and (min-width: 1024px) {
-
-  .address,
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-}
-
-.address p,
-.contacts p {
-  margin: 0;
-  padding: 9px;
-}
-
-/* .contacts__tel {}
-.contacts__mail {} */
-
-.contacts__mail-link,
-.contacts__tel-link {
+.header__contacts--mail-link,
+.header__contacts--tel-link {
   color: var(--link-color);
 }
 
-/* .contacts__facebook {} */
+/* .header__contacts--facebook {} */
 
-.contacts__facebook-link {
+.header__contacts--facebook-link {
   display: inline-flex;
   align-items: center;
   color: var(--facebook-color);
 }
 
 /* СКРИПТ ДАТИ ТА ЧАСУ */
-.date-and-time {
-  font-size: 14px;
-  color: var(--black);
-}
-
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .date-and-time {
+  .header__date-time {
     display: none;
   }
 }
 
-/* desktop L 1440 */
-@media screen and (min-width: 1440px) {
-  .date-and-time {
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .header__date-time {
     display: block;
+    font-size: 12px;
+    color: var(--black);
   }
 }
 
