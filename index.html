@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="<?=$lpath?>templates/school/style.css" />
   <link type="text/css" href="<?=$lpath?>js/jquery.lightbox.css" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- <script src="<?=$lpath?>js/jquery-1.4.2.min.js" type="text/javascript"></script> deleted as unused -->
   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> deleted for 1 try -->
   <!-- <script
@@ -40,7 +41,7 @@
         </nav>
       </aside>
 
-      <section id="right" class="main-content">
+      <main id="right" class="main-content">
         <h2 class="main-content__title">Зараз ви на сторінці →
           <?php echo $sitetitle;?>
         </h2>
@@ -52,8 +53,8 @@
         <!-- <div class="main-content__form">
           <?php include $_SERVER['DOCUMENT_ROOT'].'/mycode/'.$myinclude.'.php'; ?>
         </div> -->
-      </section>
-      <!-- НАСТУПНИЙ DIV НЕ ВИТИРАТИ, але я його витерла, і все працює  <div style="clear:both;"></div> -->
+      </main>
+      <!-- НАСТУПНИЙ DIV НЕ ВИТИРАТИ, але я його витерла, і все працює  <div style="clear:both;"></div>. Працює за рахунок даної архітектури сайту -->
     </div>
     <!-- footer -> in separate html -->
     <link rel="import" href="./footer.html">
