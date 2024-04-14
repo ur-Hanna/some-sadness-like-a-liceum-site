@@ -125,3 +125,95 @@ table 4*7
 
 
 <p style="text-align: center;"><span style="font-size: x-large;">Ми працюємо над розробкою даної сторінки 🔧</span></p>
+
+сдайдер-свайпер
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+  <style> // є в стилях.цсс
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .swiper {
+    width: 100%;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .swiper {
+    width: 500px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .swiper {
+    width: 700px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .swiper {
+    width: 940px;
+  }
+}
+
+.swiper-slide {
+  width: max-content;
+}
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+      direction: 'horizontal',
+      slidesPerView: 3,
+  // spaceBetween: 32,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        pauseOnMouseEnter: true,
+    },
+
+  // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+  // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+  </script>
+
+<!-- Slider main container -->
+  <div class="swiper">
+<!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+<!-- Slides -->
+      <div class="swiper-slide"><img src="" alt="" width="" height="" />Slide 1</div>
+      <div class="swiper-slide"><img src="" alt="" width="" height="" />Slide 2</div>
+      <div class="swiper-slide"><img src="" alt="" width="" height="" />Slide 3</div>
+    ...
+    </div>
+<!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+<!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+<!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</body>
