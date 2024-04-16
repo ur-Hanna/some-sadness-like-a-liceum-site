@@ -781,15 +781,12 @@ iframe {
   }
 }
 
-/* .side-nav {} */
-
 .side-nav__title {
   padding: 4px 8px;
   margin-bottom: 4px;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: inherit;
   line-height: 1.5;
-  letter-spacing: 1px;
   text-align: center;
   background-color: var(--blue-accent);
   color: var(--white);
@@ -797,23 +794,24 @@ iframe {
   border-radius: 4px;
 }
 
-/* .side-nav__list {} */
-
 .side-nav__item {
   padding: 4px;
 }
 
 .side-nav__link {
   display: block;
-  font-weight: 400;
+  font-weight: inherit;
   font-size: 16px;
   color: var(--link-color);
-  border-bottom: 1px dotted var(--blue-accent);
+  border-bottom: 2px solid;
+  border-image: var(--gradient-to-left);
+  transition: color, border var(--transition);
 }
 
 .side-nav__link:hover,
 .side-nav__link:focus {
   color: var(--link-hover);
+  border-image: var(--gradient-to-right);
 }
 
 /* СТИЛІ ОБЛАСТІ ПОШУКУ*/
