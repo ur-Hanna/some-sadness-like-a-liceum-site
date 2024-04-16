@@ -7,6 +7,23 @@
   --link-hover: #fec72c;
   --quote: #f47236;
   --facebook-color: #1877f2;
+
+  font-family: "Verdana", sans-serif;
+  font-style: normal;
+
+  --thin-font: 400;
+  --bold-font: 600;
+
+  --transition: 200ms linear;
+
+  --gradient-to-left: linear-gradient(to left,
+      rgb(254, 199, 44) 0%,
+      transparent 50%,
+      rgb(36, 77, 153) 100%) 0 0 100% 0/0 0 3px 0 stretch;
+  --gradient-to-right: linear-gradient(to right,
+      rgb(254, 199, 44) 0%,
+      transparent 50%,
+      rgb(36, 77, 153) 100%) 0 0 100% 0/0 0 3px 0 stretch;
 }
 
 /* СКИДАННЯ СТИЛІВ */
