@@ -146,32 +146,33 @@ table td:not(:first-child) {
   border-left: none;
 }
 
-/* phone 320 */
-@media screen and (min-width: 320px) {
-  iframe {
-    max-width: 300px !important;
-    /* height: auto !important; */
-  }
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100% !important;
+  height: 480px !important;
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
   iframe {
-    max-width: 500px !important;
+    width: 500px !important;
+    height: 500px !important;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
   iframe {
-    max-width: 670px !important;
+    width: 680px !important;
+    height: 680px !important;
   }
 }
 
 /* desktop L 1440 */
 @media screen and (min-width: 1440px) {
   iframe {
-    max-width: 820px !important;
+    height: 880px !important;
   }
 }
 
