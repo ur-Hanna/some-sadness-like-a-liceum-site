@@ -1176,3 +1176,36 @@ iframe {
   color: #f1008b;
   border-color: #f1008b;
 } */
+
+/* swiper */
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .swiper {
+    width: 100%;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .swiper {
+    width: 500px;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .swiper {
+    width: 700px;
+  }
+}
+
+/* desktop L 1440 */
+@media screen and (min-width: 1440px) {
+  .swiper {
+    width: 940px;
+  }
+}
+
+.swiper-slide {
+  width: max-content;
+}
