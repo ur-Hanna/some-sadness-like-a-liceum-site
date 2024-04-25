@@ -863,144 +863,198 @@ iframe {
 
 /* СТИЛІ ФУТЕРА */
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  padding: 24px 0;
+  line-height: 1.4;
   background-color: var(--blue-accent);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 28px 0;
+  }
+}
+
+/* підкреслення та колір тексту в футері */
+.footer hr {
+  background-color: var(--white);
+  margin-bottom: 8px;
+  opacity: .5;
+}
+
+.footer--text-color {
   color: var(--white);
 }
 
+/* контейнери для вирівнювання інформації в футері */
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .footer {
-    padding: 8px;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .footer {
-    padding: 20px 16px;
-  }
-}
-
-/* desktop 1024 */
-@media screen and (min-width: 1024px) {
-  .footer {
-    padding: 24px;
-  }
-}
-
-.footer__info--wrap {
-  display: flex;
-  width: 100%;
-}
-
-/* phone 320 */
-@media screen and (min-width: 320px) {
-  .footer__info--wrap {
+  .footer__container {
+    display: flex;
     flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* tablet 768 */
-@media screen and (min-width: 768px) {
-  .footer__info--wrap {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 24px;
   }
 }
 
 /* desktop 1024 */
 @media screen and (min-width: 1024px) {
-  .footer__info--wrap {
+  .footer__container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 32px;
+  }
+}
+
+.footer__container:first-child {
+  flex-wrap: wrap;
+}
+
+.footer__container:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+/* стилі заголовків і тексту в футері */
+.footer__heading {
+  font-size: 20px;
+}
+
+.footer__text {
+  font-size: 16px;
+}
+
+/* обгортка адреси та контактів у футері */
+/* phone 320 */
+@media screen and (min-width: 320px) {
+  .footer__address-contacts-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 425px;
+    margin-bottom: 24px;
+  }
+}
+
+/* tablet 768 */
+@media screen and (min-width: 768px) {
+  .footer__address-contacts-wrap {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+/* desktop 1024 */
+@media screen and (min-width: 1024px) {
+  .footer__address-contacts-wrap {
     justify-content: space-evenly;
   }
 }
 
-.footer__info--wrap:not(:last-child) {
-  margin-bottom: 12px;
+.footer__address-wrap {
+  margin-bottom: 24px;
 }
 
-/* АДРЕСА, КОНТАКТИ В ФУТЕРІ */
-/* phone 320 */
-/* @media screen and (min-width: 320px) {
-  .footer__info {
-    width: auto;
-  }
-} */
-
-/* tablet 768 */
-/* @media screen and (min-width: 768px) {
-  .footer__info {
-    width: 240px;
-  }
-} */
-
-/* desktop 1024 */
-/* @media screen and (min-width: 1024px) {
-  .footer__info {
-    width: 310px;
-  }
-} */
-
-/* desktop L 1440 */
-/* @media screen and (min-width: 1440px) {
-  .footer__info {
-    width: 340px;
-  }
-} */
-
-/* .footer__info:not(:last-child) {
-  margin-right: 5px;
-} */
-
-/* phone 320 */
-@media screen and (min-width: 320px) {
-  .footer__info:not(:last-child) {
-    margin-bottom: 7px;
-  }
-}
-
-/* tablet 768 */
 @media screen and (min-width: 768px) {
-  .footer__info:not(:last-child) {
+  .footer__address-wrap {
     margin-bottom: 0;
   }
 }
 
-.footer__text {
-  color: var(--white);
-  margin: 0;
+.footer__address {
+  font-style: normal;
+}
+
+.networks {
+  width: 100%;
+}
+
+.networks__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* phone 320 */
 @media screen and (min-width: 320px) {
-  .footer__text {
-    font-size: 13px;
+  .networks__item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20% / 20%;
+    background-color: var(--white);
+    transition: box-shadow var(--transition);
   }
 }
 
 /* tablet 768 */
 @media screen and (min-width: 768px) {
-  .footer__text {
-    font-size: 14px;
+  .networks__item {
+    width: 52px;
+    height: 52px;
   }
 }
 
-#footer a {
-  color: var(--white);
+.networks__item:not(:last-child) {
+  margin-right: 12px;
 }
 
-#footer a:hover,
-#footer a:focus {
-  color: var(--link-hover);
+.networks__item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
 }
 
-.footer__address {
-  font-style: normal;
+.networks__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+}
+
+/* networks styles */
+.networks--inst {
+  fill: url(#instaGradient);
+}
+
+.stop1 {
+  stop-color: #fccc63;
+}
+
+.stop2 {
+  stop-color: #fbad50;
+}
+
+.stop3 {
+  stop-color: #ee2a7b;
+}
+
+.stop4 {
+  stop-color: #bc2a8d;
+}
+
+.stop5 {
+  stop-color: #8a3ab9;
+}
+
+.footer__copy {
+  position: relative;
+}
+
+.footer__copy::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  display: block;
+  opacity: .5;
+  width: 94%;
+  height: 1px;
+  background-color: var(--white);
+  border-radius: 4px;
 }
 
 /* ОСТАННІ НОВИНИ НА ГОЛОВНІЙ */
@@ -1117,7 +1171,7 @@ iframe {
 
 .gb_subj {
   font-weight: bold;
-  border-bottom: 1px dotted var(--blue-accent);
+  border-bottom: 2px dotted var(--blue-accent);
 }
 
 .gb_date {
