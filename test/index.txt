@@ -53,7 +53,7 @@
 <link rel="stylesheet" href="./styles/styles.css">
 
 Емоджі з сайту
-👉👈🔧💙💛📞📧🔗📚🔐🏫📅
+👉👈🔧💙💛📞📧🔗📚🔐🏫📅🦠🕊️
 🔠🧘👩‍👧‍👦👩‍🏫💻⚛️🧭📃🔎🧵⚽🏃🔢🧪📖🎨🎵🧬
 
 <h3><span style="font-size: medium;"><span style="color: #993366;">Class</span></span></h3>
