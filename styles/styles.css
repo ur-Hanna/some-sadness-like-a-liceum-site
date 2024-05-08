@@ -14,7 +14,7 @@
   --thin-font: 400;
   --bold-font: 600;
 
-  --transition: 200ms linear;
+  --transition: 150ms linear;
 
   --gradient-to-left: linear-gradient(to left,
       rgb(254, 199, 44) 0%,
@@ -681,7 +681,7 @@ table td:not(:first-child) {
   display: block;
   border-bottom: 2px solid;
   border-image: var(--gradient-to-left);
-  transition: color, border var(--transition);
+  transition: all var(--transition);
 }
 
 .top-nav__sublink:hover,
@@ -794,7 +794,7 @@ table td:not(:first-child) {
   color: var(--link-color);
   border-bottom: 2px solid;
   border-image: var(--gradient-to-left);
-  transition: color, border var(--transition);
+  transition: all var(--transition);
 }
 
 .side-nav__link:hover,
