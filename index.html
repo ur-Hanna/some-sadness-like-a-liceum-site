@@ -11,9 +11,10 @@
   <meta name="description" content="<?php echo $metadescription;?>" />
   <link rel="stylesheet" type="text/css" href="<?=$lpath?>templates/school/style.css" />
   <link type="text/css" href="<?=$lpath?>js/jquery.lightbox.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body id="body">
@@ -47,6 +48,20 @@
     <!-- footer -> in separate html -->
     <link rel="import" href="./footer.html">
   </div>
+  <script>
+    $(document).ready(function () {
+      $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var target = this.hash,
+          $target = $(target);
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+          window.location.hash = target;
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
