@@ -230,54 +230,53 @@ table td:not(:first-child) {
 }
 
 /* СТИЛІ ЛІВОЇ ЧАСТИНИ ХЕДЕРА */
-@media screen and (min-width: 1024px) {
-  .header__wrap--left {
-    display: flex;
-    align-items: center;
-  }
+.header__wrap--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* логотип у хедері */
 @media screen and (min-width: 320px) {
-  .header__img--wrap {
+  .logo--link {
     display: none;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .header__img--wrap {
+  .logo--link {
     display: inline-flex;
     margin-right: 4px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  .header__img {
   .site__logo {
     display: none;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .header__img {
+  .site__logo {
     display: inline-block;
     width: 90px;
   }
 }
 
-.header__title--wrap {
+.site__title--wrap {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
 @media screen and (min-width: 320px) {
-  .header__title--wrap {
+  .site__title--wrap {
     text-align: center;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .header__title--wrap {
+  .site__title--wrap {
     text-align: left;
   }
 }
@@ -446,21 +445,8 @@ table td:not(:first-child) {
   padding: 8px 0;
 }
 
-.header__contacts--mail-link,
-.header__contacts--tel-link {
+.header__link {
   color: var(--link-color);
-}
-
-.header__contacts--facebook-link {
-  display: inline-flex;
-  align-items: center;
-  color: var(--facebook-color);
-}
-
-.header__contacts--insta-link {
-  display: inline-flex;
-  align-items: center;
-  color: var(--insta-color);
 }
 
 /* СКРИПТ ДАТИ ТА ЧАСУ */
