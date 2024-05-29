@@ -13,7 +13,7 @@
   --thin-font: 400;
   --bold-font: 600;
 
-  --transition: 150ms linear;
+  --transition: 200ms ease;
 
   --gradient-to-left: linear-gradient(to left,
       rgb(254, 199, 44) 0%,
