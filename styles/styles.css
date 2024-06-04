@@ -868,13 +868,6 @@ table td:not(:first-child) {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .footer__address-wrap {
-    display: flex;
-    align-items: center;
-  }
-}
-
 .footer__address {
   font-style: normal;
 }
@@ -955,6 +948,7 @@ table td:not(:first-child) {
 .footer__copy {
   position: relative;
   font-size: 12px;
+  text-align: center;
 }
 
 .footer__copy::before {
