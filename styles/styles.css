@@ -7,11 +7,11 @@
   --link-hover: #fec72c;
   --quote: #f47236;
 
-  font-family: "Verdana", sans-serif;
+  font-family: "Roboto", "Verdana", sans-serif;
   font-style: normal;
 
   --thin-font: 400;
-  --bold-font: 600;
+  --bold-font: 700;
 
   --transition: 200ms ease;
 
