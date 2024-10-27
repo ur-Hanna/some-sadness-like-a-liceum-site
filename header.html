@@ -25,28 +25,6 @@
         </p>
         <p><a href="#footer" class="header__link">🔗&nbsp;Наші соцмережі</a></p>
       </div>
-    <!-- date / time -->
-    <div id="time" class="header__date-time">
-      <script language="JavaScript">
-        const pos = document.getElementById("time");
-        function time() {
-          const today = new Date();
-          const day_of_week = ["неділя", "понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота"];
-          const month_of_year = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"];
-          const day_ = day_of_week[today.getDay()];
-          const date_ = today.getDate();
-          const month_ = month_of_year[today.getMonth()];
-          const year_ = today.getFullYear();
-          const hours_ = today.getHours();
-          const min_ = today.getMinutes();
-          const sec_ = today.getSeconds();
-          let zerom = zeros = '';
-          if (min_ < 10) zerom = '0';
-          if (sec_ < 10) zeros = '0';
-          pos.innerHTML = '📅 ' + date_ + ' ' + month_ + ' ' + year_ + ' року,' + ' ' + day_ + '. ' + hours_ + ':' + zerom + min_ + ':' + zeros + sec_;
-        }
-        setInterval(time, 1);
-      </script>
     </div>
   </div>
 </header>
