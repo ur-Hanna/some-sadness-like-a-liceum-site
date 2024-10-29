@@ -198,9 +198,10 @@ table td:not(:first-child) {
 .header {
   display: flex;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 9, 27, 0.5), rgba(72, 106, 170, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-image: linear-gradient(rgba(0, 9, 27, .5), rgba(36, 77, 153, .5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 8px 8px -4px rgba(0, 0, 0, .5);
 }
 
 @media screen and (min-width: 320px) {
@@ -420,7 +421,7 @@ table td:not(:first-child) {
   position: sticky;
   top: 0;
   padding: 0 4px;
-  background-image: linear-gradient(rgba(72, 106, 170, 0.5), rgba(72, 106, 170, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-image: linear-gradient(rgba(36, 77, 153, .5), rgba(36, 77, 153, .5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
@@ -770,8 +771,7 @@ table td:not(:first-child) {
   width: 100%;
   padding: 24px 0;
   line-height: 1.4;
-  /*   background-color: var(--blue-accent); */
-  background-image: linear-gradient(rgba(72, 106, 170, 0.5), rgba(0, 9, 27, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-image: linear-gradient(rgba(36, 77, 153, .5), rgba(0, 9, 27, .5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
