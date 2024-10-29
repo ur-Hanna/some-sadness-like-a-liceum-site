@@ -1,0 +1,1152 @@
+:root {
+  --black: #2f2f2f;
+  --white: #f6f6f6;
+  --blue-accent: #486aaa;
+  --pink-accent: #993366;
+  --link-color: #244d99;
+  --link-hover: #fec72c;
+  --quote: #f47236;
+
+  font-family: "Verdana", sans-serif;
+  font-style: normal;
+
+  --thin-font: 400;
+  --bold-font: 600;
+
+  --transition: 200ms ease;
+
+  --gradient-to-left: linear-gradient(to left,
+      rgb(254, 199, 44) 0%,
+      transparent 50%,
+      rgb(36, 77, 153) 100%) 0 0 100% 0/0 0 3px 0 stretch;
+  --gradient-to-right: linear-gradient(to right,
+      rgb(254, 199, 44) 0%,
+      transparent 50%,
+      rgb(36, 77, 153) 100%) 0 0 100% 0/0 0 3px 0 stretch;
+}
+
+/* СКИДАННЯ СТИЛІВ */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-weight: var(--thin-font);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--black);
+  padding: 0;
+  margin: 0;
+  background-color: #f0e1d1;
+}
+
+p {
+  padding: 0px;
+  margin: 0;
+  color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+}
+
+img {
+  display: inline-block;
+  border: none;
+}
+
+@media screen and (min-width: 320px) {
+  img {
+    max-width: 300px !important;
+    height: auto !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    max-width: 496px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  img {
+    max-width: 670px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  img {
+    max-width: 820px !important;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color var(--transition);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--link-hover);
+}
+
+ul>li {
+  list-style-type: none;
+}
+
+.gsc-search-box th,
+.gsc-search-box td {
+  border: none;
+}
+
+table {
+  width: 100%;
+  color: inherit;
+  font-size: small;
+}
+
+table th,
+table td {
+  border: 1px var(--black) solid;
+  padding: 4px;
+}
+
+table th:not(:first-child) {
+  border-left: none;
+}
+
+table td:first-child {
+  border-top: none;
+}
+
+table td:not(:first-child) {
+  border-top: none;
+  border-left: none;
+}
+
+@media screen and (min-width: 320px) {
+  iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  iframe {
+    max-width: 300px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  iframe {
+    max-width: 670px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  iframe {
+    max-width: 820px !important;
+  }
+}
+
+/* ОБГОРТКА САЙТУ */
+#wrap {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) {
+  #wrap {
+    max-width: 480px;
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #wrap {
+    max-width: 768px;
+    box-shadow: 1px 1px 7px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrap {
+    max-width: 1024px;
+    box-shadow: 1px 5px 11px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #wrap {
+    max-width: 1280px;
+  }
+}
+
+/* СТИЛІ ХЕДЕРА */
+.header {
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 9, 27, 0.5), rgba(72, 106, 170, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    padding: 12px;
+    flex-direction: column;
+    background-color: var(--white);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 16px 24px;
+  }
+}
+
+/* СТИЛІ ЛІВОЇ ЧАСТИНИ ХЕДЕРА */
+.header__wrap--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* логотип у хедері */
+@media screen and (min-width: 320px) {
+  .logo--link {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo--link {
+    display: inline-flex;
+    margin-right: 4px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .site__logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .site__logo {
+    display: inline-block;
+    width: 80px;
+  }
+}
+
+.site__title--wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+@media screen and (min-width: 320px) {
+  .site__title--wrap {
+    text-align: center;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  .site__title--wrap>h2 {
+    display: contents;
+  }
+} */
+
+@media screen and (min-width: 1024px) {
+  .site__title--wrap {
+    text-align: left;
+  }
+}
+
+/* НАЗВА ЗАКЛАДУ */
+.site__title {
+  font-family: "Lucida Bright", serif;
+  font-weight: var(--bold-font);
+  text-transform: uppercase;
+  line-height: normal;
+  color: var(--white);
+}
+
+@media screen and (min-width: 320px) {
+  .site__title {
+    font-size: 24px;
+    text-shadow: 1px 1px 2px var(--black);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site__title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .site__title {
+    text-shadow: 2px 2px 2px var(--black);
+  }
+}
+
+.site__aftertitle {
+  font-family: inherit;
+  font-weight: var(--bold-font);
+  line-height: 1.3;
+  text-transform: none;
+  color: var(--white);
+  text-shadow: 1px 1px 1px var(--black);
+}
+
+@media screen and (min-width: 320px) {
+  .site__aftertitle {
+    font-size: 15px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site__aftertitle {
+    display: contents;
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .site__aftertitle {
+    display: inline-block;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .site__aftertitle {
+    font-size: 16px;
+  }
+}
+
+/* СТИЛІ ПРАВОЇ ЧАСТИНИ ХЕДЕРА */
+@media screen and (min-width: 320px) {
+  .header__wrap--right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__wrap--right {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__wrap--right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* КОНТАКТИ в хедері */
+@media screen and (min-width: 320px) {
+  .header__contacts {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__contacts {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 12px;
+    font-weight: var(--bold-font);
+    line-height: 0.4;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    margin-right: 20px;
+    margin-top: 0;
+    font-weight: inherit;
+  }
+}
+
+.header__contacts p {
+  margin: 0;
+  padding: 8px 0;
+}
+
+.header__link {
+  color: var(--white);
+}
+
+/* СТИЛІ МЕНЮ ВГОРІ*/
+.top-nav {
+  position: sticky;
+  top: 0;
+  padding: 0 4px;
+  background-image: linear-gradient(rgba(72, 106, 170, 0.5), rgba(72, 106, 170, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  z-index: 9;
+}
+
+@media screen and (min-width: 320px) {
+  .top-nav {
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top-nav {
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .top-nav {
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .top-nav__list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .top-nav__list {
+    gap: 8px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .top-nav__list {
+    gap: 8px 12px;
+  }
+}
+
+.top-nav__item {
+  position: relative;
+}
+
+.top-nav__link {
+  display: block;
+  position: relative;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--white);
+}
+
+.top-nav__link:hover,
+.top-nav__link:focus {
+  color: var(--white);
+}
+
+.top-nav__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--link-hover);
+  border-radius: 4px;
+  transition: opacity var(--transition);
+}
+
+.top-nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--link-hover);
+  border-radius: 4px;
+  transition: opacity var(--transition);
+}
+
+.top-nav__link:hover::before,
+.top-nav__link:hover::after {
+  opacity: 1;
+}
+
+/* трикутник біля айтемів у верхньому меню */
+@media screen and (min-width: 320px) {
+  .top-nav--triangle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .top-nav--triangle {
+    display: inline-block;
+  }
+}
+
+/* СТИЛІ ПРИХОВАНОГО ВЕРХНЬОГО СПИСКУ */
+.top-nav__sublist {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: var(--bold-font);
+  transition: opacity var(--transition), visibility 500ms ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .top-nav__item:hover .top-nav__sublist {
+    display: block;
+    z-index: 2;
+    box-shadow: 0px 4px 8px 0px #486aaa;
+    width: 280px;
+    padding: 4px;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .top-nav__item:hover .top-nav__sublist {
+    width: 330px;
+  }
+}
+
+.top-nav__subitem {
+  min-height: 24px;
+}
+
+.top-nav__sublink {
+  display: block;
+  border-bottom: 2px solid;
+  border-image: var(--gradient-to-left);
+  transition: all var(--transition);
+}
+
+.top-nav__sublink:hover,
+.top-nav__sublink:focus {
+  border-image: var(--gradient-to-right);
+}
+
+@media screen and (min-width: 1024px) {
+  .top-nav__sublink {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .top-nav__sublink {
+    font-size: 18px;
+  }
+}
+
+/* СТИЛІ КОНТЕНТУ */
+#content {
+  display: flex;
+  background: var(--white);
+}
+
+@media screen and (min-width: 320px) {
+  #content {
+    flex-direction: column;
+    padding: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #content {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #content {
+    padding: 24px;
+  }
+}
+
+/* СТИЛІ БЛОКУ НАВІГАЦІЇ */
+.sidebar {
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 320px) {
+  .sidebar {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 4px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 220px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    width: 280px;
+    padding: 8px;
+  }
+}
+
+/* останні новини */
+.news__wrap {}
+
+.news__heading {
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: inherit;
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--blue-accent);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+}
+
+.news__list {}
+
+.last-news-date {
+  text-align: right;
+  font-style: italic;
+  color: #959595;
+  font-size: 80%;
+}
+
+.last-news-title {
+  font-weight: bold;
+  clear: both;
+  text-decoration: underline;
+}
+
+.last-news-mess {
+  margin-bottom: 10px;
+}
+
+/* бічна навігація */
+.side-nav__title {
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: inherit;
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--blue-accent);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+}
+
+.side-nav__item {
+  padding: 4px;
+}
+
+.side-nav__link {
+  display: block;
+  font-weight: inherit;
+  font-size: 16px;
+  color: var(--link-color);
+  border-bottom: 2px solid;
+  border-image: var(--gradient-to-left);
+  transition: all var(--transition);
+}
+
+.side-nav__link:hover,
+.side-nav__link:focus {
+  color: var(--link-hover);
+  border-image: var(--gradient-to-right);
+}
+
+/* СТИЛІ ОБЛАСТІ ПОШУКУ*/
+.gsc-input-box {
+  border-radius: 4px;
+}
+
+.gsc-search-button {
+  cursor: pointer;
+}
+
+/* СТИЛІ КОНТЕНТУ ПО ЦЕНТРУ СТОРІНКИ */
+@media screen and (min-width: 320px) {
+  .main-content {
+    width: auto;
+    padding: 4px;
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    width: 100%;
+    padding-left: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-content {
+    padding: 8px 8px 8px 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-content {
+    padding: 8px 8px 8px 24px;
+  }
+}
+
+.main-content__title {
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid;
+  border-image: var(--gradient-to-left);
+  text-align: left;
+  font-size: 17px;
+  font-weight: var(--bold-font);
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* СТИЛІ ФУТЕРА */
+.footer {
+  width: 100%;
+  padding: 24px 0;
+  line-height: 1.4;
+  /*   background-color: var(--blue-accent); */
+  background-image: linear-gradient(rgba(72, 106, 170, 0.5), rgba(0, 9, 27, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 28px 0;
+  }
+}
+
+/* підкреслення та колір тексту в футері */
+.footer hr {
+  background-color: var(--white);
+  margin-bottom: 8px;
+  opacity: .5;
+}
+
+.footer--text-color {
+  color: var(--white);
+}
+
+/* контейнери для вирівнювання інформації в футері */
+@media screen and (min-width: 320px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 32px;
+  }
+}
+
+.footer__container:first-child {
+  flex-wrap: wrap;
+}
+
+.footer__container:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+/* стилі заголовків і тексту в футері */
+.footer__heading {
+  font-size: 20px;
+}
+
+.footer__text {
+  font-size: 16px;
+}
+
+/* обгортка адреси та контактів у футері */
+@media screen and (min-width: 320px) {
+  .footer__address-contacts-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 425px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__address-contacts-wrap {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+.footer__address-wrap {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__address-wrap {
+    margin-bottom: 0;
+  }
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+/* networks styles */
+@media screen and (min-width: 320px) {
+  .footer-networks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 425px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-networks {
+    max-width: max-content;
+  }
+}
+
+.footer-networks__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-networks__item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 20% / 20%;
+  background-color: var(--white);
+  transition: box-shadow var(--transition);
+}
+
+.footer-networks__item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.footer-networks__item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+}
+
+.footer-networks__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+}
+
+.networks--inst {
+  fill: url(#instaGradient);
+}
+
+.stop1 {
+  stop-color: #fccc63;
+}
+
+.stop2 {
+  stop-color: #fbad50;
+}
+
+.stop3 {
+  stop-color: #ee2a7b;
+}
+
+.stop4 {
+  stop-color: #bc2a8d;
+}
+
+.stop5 {
+  stop-color: #8a3ab9;
+}
+
+.footer__copy {
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer__copy::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  display: block;
+  opacity: .5;
+  width: 94%;
+  height: 1px;
+  background-color: var(--white);
+  border-radius: 4px;
+}
+
+/* СТИЛІ ГОСТЬОВОЇ КНИГИ ТА ЗВОРОТНОГО ЗВ'ЯЗКУ */
+/* .error {
+  border: 1px solid #f1008b;
+  background-color: #ffdff1;
+  color: #ff3366;
+  padding: 3px 10px;
+} */
+
+/* .info {
+  border: 1px solid #66cc00;
+  background-color: #f0ffc4;
+  color: #66cc00;
+  padding: 3px 10px;
+} */
+
+/* ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ */
+/* .feedback {
+  border: 0;
+  width: 100%;
+}
+
+.feedback td {
+  width: 32%;
+} */
+
+/* .feedback input,
+.feedback textarea {
+  width: 100%;
+  border: 1px solid var(--blue-accent);
+  color: var(--black);
+}
+
+.feedback input:hover,
+.feedback textarea:hover {
+  border-color: var(--blue-accent);
+  color: var(--black);
+} */
+
+/* ОФОРМЛЕННЯ ГОСТЬОВОЇ */
+/* #captcha {
+  background-color: #ffffff;
+  border: 1px solid #244d99;
+  display: inline;
+  cursor: pointer;
+}
+
+#guestbook #captcha {
+  margin: 0 0 -5px 0 !important;
+} */
+
+/* .error {
+  border: 1px solid #f1008b;
+  background-color: #ffdff1;
+  color: #ff3366;
+  padding: 3px 10px;
+}
+
+.info {
+  border: 1px solid #66cc00;
+  background-color: #f0ffc4;
+  color: #66cc00;
+  padding: 3px 10px;
+}
+
+.guestbook {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.guestbook TD {
+  padding: 3px;
+}
+
+.guestbook input,
+.guestbook textarea {
+  width: 100%;
+  border: 1px solid #969696;
+  color: #3e3e3e;
+}
+
+.guestbook input:hover,
+.guestbook textarea:hover {
+  border-color: #000;
+  color: #000;
+}
+
+.gb_post {
+  background-color: #eaeaea;
+  border: 1px solid #d3d3d3;
+  padding: 3px;
+  margin: 5px 0;
+  position: relative;
+}
+
+.gb_subj {
+  font-weight: bold;
+  border-bottom: 2px dotted var(--blue-accent);
+}
+
+.gb_date {
+  font-style: italic;
+  color: #7f7f7f;
+  padding-left: 5px;
+  font-weight: normal;
+  float: right;
+  font-size: 80%;
+}
+
+.gb_author {
+  color: #ff3366;
+  padding-left: 20px;
+  line-height: 20px;
+  background-image: url(images/mail.png);
+  background-repeat: no-repeat;
+}
+
+.gb_message {
+  clear: both;
+}
+
+.gb_comment_link {
+  background-image: url(images/comments.png);
+  background-repeat: no-repeat;
+  color: #ff33cc;
+  padding-left: 20px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+.gb_comment {
+  background-color: transparent;
+  border: 1px dashed #d3d3d3;
+  padding: 3px;
+  margin: 5px 0 5px 20px;
+  position: relative;
+}
+
+.gb_nav a {
+  border: 1px solid #d3d3d3;
+  background-color: #e8e8e8;
+  text-decoration: none;
+  padding: 1px;
+  margin: 1px;
+  color: #000000;
+}
+
+.gb_nav a:hover {
+  color: #f1008b;
+  border-color: #f1008b;
+}
+
+.gb_nav a.current {
+  font-weight: bold;
+  color: #f1008b;
+  border-color: #f1008b;
+} */
+
+/* swiper */
+@media screen and (min-width: 320px) {
+  .swiper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiper {
+    width: 940px;
+  }
+}
+
+.swiper-slide {
+  width: max-content;
+}
+
+/* -----------------NEW-STYLES------------------------- */
+/* .top-nav__sublist:hover+.top-nav__link .top-nav__sublist {
+  transition: visibility var(--transition), opacity var(--transition);
+}
+
+.top-nav__sublist:hover+.top-nav__link .top-nav__link::before,
+.top-nav__sublist:hover+.top-nav__link .top-nav__link::after {
+  transition: opacity var(--transition);
+} */
