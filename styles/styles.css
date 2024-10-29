@@ -201,6 +201,7 @@ table td:not(:first-child) {
   background-image: linear-gradient(rgba(0, 9, 27, .5), rgba(36, 77, 153, .5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 8px 8px -4px rgba(0, 0, 0, .5);
 }
 
 @media screen and (min-width: 320px) {
@@ -319,7 +320,7 @@ table td:not(:first-child) {
 
 .site__aftertitle {
   font-family: inherit;
-  font-weight: var(--bold-font);
+  font-weight: var(--thin-font);
   line-height: 1.3;
   text-transform: none;
   color: var(--white);
@@ -328,7 +329,6 @@ table td:not(:first-child) {
 
 @media screen and (min-width: 320px) {
   .site__aftertitle {
-    font-size: 15px;
     display: none;
   }
 }
@@ -336,20 +336,20 @@ table td:not(:first-child) {
 @media screen and (min-width: 768px) {
   .site__aftertitle {
     display: contents;
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .site__aftertitle {
     display: inline-block;
-    font-size: 12px;
+    font-size: 13.6px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .site__aftertitle {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -417,11 +417,11 @@ table td:not(:first-child) {
 
 /* СТИЛІ МЕНЮ ВГОРІ*/
 .top-nav {
-  position: sticky;
   top: 0;
   padding: 0 4px;
-  background: var(--blue-accent);
-  background-size: 100%;
+  background-image: linear-gradient(rgba(36, 77, 153, .5), rgba(36, 77, 153, .5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   border: none;
   z-index: 9;
 }
@@ -434,13 +434,22 @@ table td:not(:first-child) {
 
 @media screen and (min-width: 768px) {
   .top-nav {
+    position: sticky;
     line-height: 1.2;
+    background-position: 0 26.5%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .top-nav {
     line-height: 1.4;
+    background-position: 0 17%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .top-nav {
+    background-position: 0 12.4%;
   }
 }
 
@@ -449,11 +458,11 @@ table td:not(:first-child) {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 4px 8px;
+    gap: 4px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .top-nav__list {
     gap: 8px;
   }
@@ -467,23 +476,27 @@ table td:not(:first-child) {
 
 .top-nav__item {
   position: relative;
+  padding: 4px;
 }
 
 .top-nav__link {
   display: block;
   position: relative;
-  padding: 8px 0;
+  padding: 4px;
   text-decoration: none;
   font-size: 17px;
   color: var(--white);
+  transition: box-shadow var(--transition);
 }
 
 .top-nav__link:hover,
 .top-nav__link:focus {
   color: var(--white);
+  box-shadow: linear-gradient(rgba(0, 0, 0, 0), rgba(254, 197, 42, .7));
+  /* 1px 1px 1px rgb(254, 197, 42) inset; */
 }
 
-.top-nav__link::before {
+/* .top-nav__link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -495,9 +508,9 @@ table td:not(:first-child) {
   background-color: var(--link-hover);
   border-radius: 4px;
   transition: opacity var(--transition);
-}
+} */
 
-.top-nav__link::after {
+/* .top-nav__link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -509,12 +522,12 @@ table td:not(:first-child) {
   background-color: var(--link-hover);
   border-radius: 4px;
   transition: opacity var(--transition);
-}
+} */
 
-.top-nav__link:hover::before,
+/* .top-nav__link:hover::before,
 .top-nav__link:hover::after {
   opacity: 1;
-}
+} */
 
 /* трикутник біля айтемів у верхньому меню */
 @media screen and (min-width: 320px) {
@@ -537,11 +550,11 @@ table td:not(:first-child) {
   background-color: var(--white);
   color: var(--black);
   font-weight: var(--bold-font);
-  transition: var(--transition);
+  transition: opacity var(--transition), visibility 500ms ease;
 }
 
 @media screen and (min-width: 1024px) {
-  .top-nav__item:hover>.top-nav__sublist {
+  .top-nav__item:hover .top-nav__sublist {
     display: block;
     z-index: 2;
     box-shadow: 0px 4px 8px 0px #486aaa;
@@ -552,7 +565,7 @@ table td:not(:first-child) {
 }
 
 @media screen and (min-width: 1440px) {
-  .top-nav__item:hover>.top-nav__sublist {
+  .top-nav__item:hover .top-nav__sublist {
     width: 330px;
   }
 }
@@ -733,8 +746,7 @@ table td:not(:first-child) {
   width: 100%;
   padding: 24px 0;
   line-height: 1.4;
-/*   background-color: var(--blue-accent); */
-  background-image: linear-gradient (rgba(72, 106, 170, 0.5), rgba(0, 9, 27, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-image: linear-gradient(rgba(36, 77, 153, .5), rgba(0, 9, 27, .5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -917,24 +929,6 @@ table td:not(:first-child) {
   background-color: var(--white);
   border-radius: 4px;
 }
-
-/* ОСТАННІ НОВИНИ НА ГОЛОВНІЙ */
-/* .last-news-date {
-  float: right;
-  font-style: italic;
-  color: #959595;
-  font-size: 80%;
-}
-
-.last-news-title {
-  font-weight: bold;
-  clear: both;
-  text-decoration: underline;
-}
-
-.last-news-mess {
-  margin-bottom: 10px;
-} */
 
 /* СТИЛІ ГОСТЬОВОЇ КНИГИ ТА ЗВОРОТНОГО ЗВ'ЯЗКУ */
 /* .error {
@@ -1121,3 +1115,13 @@ table td:not(:first-child) {
 .swiper-slide {
   width: max-content;
 }
+
+/* -----------------NEW-STYLES------------------------- */
+/* .top-nav__sublist:hover+.top-nav__link .top-nav__sublist {
+  transition: visibility var(--transition), opacity var(--transition);
+}
+
+.top-nav__sublist:hover+.top-nav__link .top-nav__link::before,
+.top-nav__sublist:hover+.top-nav__link .top-nav__link::after {
+  transition: opacity var(--transition);
+} */
