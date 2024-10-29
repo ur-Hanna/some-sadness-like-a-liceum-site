@@ -374,39 +374,8 @@ table td:not(:first-child) {
   }
 }
 
-/* КОНТАКТИ ТА АДРЕСА в хедері */
-@media screen and (min-width: 320px) {
-  .header__contacts--wrap {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header__contacts--wrap {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 12px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header__contacts--wrap {
-    width: auto;
-    margin-top: 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header__contacts {
-    margin-right: 20px;
-  }
-}
-
 /* КОНТАКТИ в хедері */
 @media screen and (min-width: 320px) {
-
-  .header__address,
   .header__contacts {
     display: none;
   }
@@ -420,20 +389,6 @@ table td:not(:first-child) {
     font-size: 12px;
     font-weight: var(--bold-font);
     line-height: 0.4;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header__address {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: auto;
-    font-size: 12px;
-    font-weight: inherit;
-    font-style: inherit;
-    line-height: 0.4;
     margin-top: 12px;
   }
 }
@@ -451,7 +406,6 @@ table td:not(:first-child) {
   }
 }
 
-.header__address p,
 .header__contacts p {
   margin: 0;
   padding: 8px 0;
