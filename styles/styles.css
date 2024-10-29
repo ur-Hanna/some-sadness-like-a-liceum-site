@@ -766,7 +766,10 @@ table td:not(:first-child) {
   width: 100%;
   padding: 24px 0;
   line-height: 1.4;
-  background-color: var(--blue-accent);
+/*   background-color: var(--blue-accent); */
+  background-image: linear-gradient (rgba(72, 106, 170, 0.5), rgba(0, 9, 27, 0.5)), url(http://sch3.mledu.vn.ua/media/image/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (min-width: 1024px) {
