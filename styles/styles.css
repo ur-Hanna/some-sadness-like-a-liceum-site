@@ -318,6 +318,11 @@ table td:not(:first-child) {
   }
 }
 
+.site__title>.reload-page,
+.site__aftertitle>.reload-page {
+  color: var(--white);
+}
+
 .site__aftertitle {
   font-family: inherit;
   font-weight: var(--thin-font);
