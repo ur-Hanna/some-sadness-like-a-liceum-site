@@ -628,6 +628,42 @@ table td:not(:first-child) {
   }
 }
 
+/* останні новини */
+.news__wrap {}
+
+.news__heading {
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: inherit;
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--blue-accent);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+}
+
+.news__list {}
+
+.last-news-date {
+  text-align: right;
+  font-style: italic;
+  color: #959595;
+  font-size: 80%;
+}
+
+.last-news-title {
+  font-weight: bold;
+  clear: both;
+  text-decoration: underline;
+}
+
+.last-news-mess {
+  margin-bottom: 10px;
+}
+
+/* бічна навігація */
 .side-nav__title {
   padding: 4px 8px;
   margin-bottom: 4px;
