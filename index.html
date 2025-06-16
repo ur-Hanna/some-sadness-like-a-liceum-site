@@ -16,7 +16,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <!-- <link rel="stylesheet" href="./styles/styles.css"> -->
-  <!-- <link rel="stylesheet" href="./test/test.css"> -->
+  <link rel="stylesheet" href="./test/test.css">
 </head>
 
 <body id="body">
@@ -98,13 +98,10 @@
                 class="top-nav__sublink">Безпека дітей у Інтернеті</a>
             </li>
             <li class="top-nav__subitem">
-              <a href="/dlya_batkv/zayavi_ta_dovdki/" rel="noopener noreferrer nofollow" class="top-nav__sublink">Заяви
-                та
-                довідки</a>
+              <a href="/dlya_batkv/zayavi_ta_dovdki/" rel="noopener noreferrer nofollow" class="top-nav__sublink">Заяви та довідки</a>
             </li>
             <li class="top-nav__subitem">
-              <a href="/dlya_batkv/mnna_bezpeka.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Мінна
-                безпека</a>
+              <a href="/dlya_batkv/mnna_bezpeka.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Мінна безпека</a>
             </li>
             <li class="top-nav__subitem">
               <a href="/dlya_batkv/pamyatki_dlya_batkv/" rel="noopener noreferrer nofollow"
@@ -112,8 +109,7 @@
             </li>
             <li class="top-nav__subitem">
               <a href="https://drive.google.com/file/d/1NyYU8u0mA8pfBIgKwffAhvxgYRhJUkiq/view?usp=sharing"
-                rel="noopener noreferrer nofollow" class="top-nav__sublink">Порядок зарахування, переведення
-                та відрахування з закладу</a>
+                rel="noopener noreferrer nofollow" class="top-nav__sublink">Порядок зарахування, переведення та відрахування з закладу</a>
             </li>
             <li class="top-nav__subitem">
               <a href="/dlya_batkv/pravila_zvtnost_za_propuski.html" rel="noopener noreferrer nofollow"
@@ -121,8 +117,7 @@
             </li>
             <li class="top-nav__subitem">
               <a href="/harchuvannya.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Реквізити для
-                оплати
-                за харчування</a>
+                оплати за харчування</a>
             </li>
           </ul>
         </li>
@@ -202,18 +197,51 @@
 
         <!-- sidebar navigation -->
         <nav id="left" class="side-nav">
-          <h2 class="side-nav__title">Навігація</h2>
-          <ul class="side-nav__list">
+          <div class="side-nav__title--wrap">
+            <h2 class=" side-nav__title">Навігація</h2>
+            <button type="button" class="side-nav__btn--open" aria-label="open-nav">
+              <svg role="img" width="24" height="24" viewBox="0 0 24 24" class="side-nav__icon" fill="#f6f6f6">
+                <title lang="uk">Навігація</title>
+                <path
+                  d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" />
+              </svg>
+            </button>
+            <button type="button" class="side-nav__btn--close" aria-label="close-nav">
+              <svg role="img" width="24" height="24" viewBox="0 0 1024 1024" class="side-nav__icon" fill="#f6f6f6">
+                <title>Закрити</title>
+                <path
+                  d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" />
+              </svg>
+            </button>
+          </div>
+          <script>
+            (() => {
+              const refs = {
+                openModalBtn: document.querySelector('[open-nav]'),
+                closeModalBtn: document.querySelector('[close-nav]'),
+                modal: document.querySelector('[aside-nav]'),
+                body: document.querySelector('body'),
+              };
+
+              refs.openModalBtn.addEventListener('click', toggleModal);
+              refs.closeModalBtn.addEventListener('click', toggleModal);
+
+              function toggleModal() {
+                refs.modal.classList.toggle('is-hidden');
+                refs.body.classList.toggle('no-scroll');
+              }
+            })();
+          </script>
+
+          <ul class="side-nav__list" aria-label="aside-nav">
             <!-- замість списка на сайті <?php include $_SERVER['DOCUMENT_ROOT'].'/engine/menu.php'; ?> -->
             <li class="side-nav__item">
               <a class="side-nav__link" href="/antikoruptsyn_zahodi.html"
-                rel="noopener noreferrer nofollow">Антикорупційні
-                заходи</a>
+                rel="noopener noreferrer nofollow">Антикорупційні заходи</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/akademchna_dobrochesnst.html"
-                rel="noopener noreferrer nofollow">Академічна
-                доброчесність</a>
+                rel="noopener noreferrer nofollow">Академічна доброчесність</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/bezbariernst.html"
@@ -221,8 +249,7 @@
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/bezpeka_osvtnogo_seredovishcha/"
-                rel="noopener noreferrer nofollow">Безпека
-                освітнього середовища</a>
+                rel="noopener noreferrer nofollow">Безпека освітнього середовища</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/bbloteka/" rel="noopener noreferrer nofollow">Бібліотека</a>
@@ -236,8 +263,7 @@
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/distantsyne_navchannya.html"
-                rel="noopener noreferrer nofollow">Дистанційне
-                навчання</a>
+                rel="noopener noreferrer nofollow">Дистанційне навчання</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/elektronniy_zhurnal.html" rel="noopener noreferrer nofollow">Електронний
@@ -245,8 +271,7 @@
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/ltseyu_mi_gotov/" rel="noopener noreferrer nofollow">Інформаційна
-                кампанія
-                &quot;Ліцею, ми готові!&quot;</a>
+                кампанія &quot;Ліцею, ми готові!&quot;</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/medichna_sluzhba/" rel="noopener noreferrer nofollow">Медична служба</a>
@@ -261,8 +286,7 @@
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/organzatsya_osvtnogo_protsesu/"
-                rel="noopener noreferrer nofollow">Організація
-                освітнього процесу</a>
+                rel="noopener noreferrer nofollow">Організація освітнього процесу</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/prozorst_ta_nformatsyna_vdkritst_zakladu_osvti/"
@@ -270,23 +294,19 @@
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/profsplkoviy_komtet.html"
-                rel="noopener noreferrer nofollow">Профспілковий
-                комітет</a>
+                rel="noopener noreferrer nofollow">Профспілковий комітет</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/sotsalno-psihologchna_sluzhba/"
-                rel="noopener noreferrer nofollow">Соціально -
-                психологічна служба</a>
+                rel="noopener noreferrer nofollow">Соціально - психологічна служба</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/spvpratsya_z_sluzhbami.html" rel="noopener noreferrer nofollow">Співпраця
-                з
-                державними та міськими службами</a>
+                з державними та міськими службами</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/strategya_rozvitku_zakladu.html"
-                rel="noopener noreferrer nofollow">Стратегія
-                розвитку закладу</a>
+                rel="noopener noreferrer nofollow">Стратегія розвитку закладу</a>
             </li>
             <li class="side-nav__item">
               <a class="side-nav__link" href="/harchuvannya/" rel="noopener noreferrer nofollow">Харчування</a>
@@ -297,8 +317,7 @@
 
       <!---------- MAIN CONTENT ---------->
       <main id="right" class="main-content">
-        <h2 class="main-content__title">Зараз ви на сторінці →
-          <?php echo $sitetitle;?>
+        <h2 class="main-content__title">Зараз ви на сторінці <span style="color: #244d99;"><?php echo $sitetitle;?></span>
         </h2>
 
         <!-- search script -->
