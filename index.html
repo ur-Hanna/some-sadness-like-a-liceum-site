@@ -1,437 +1,482 @@
 <!DOCTYPE html>
 <html lang="uk">
+	<head>
+		<meta charset="windows-1251" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><?php echo $sitetitle;?></title>
+		<meta name="keywords" content="<?php echo $metakeywords;?>" />
+		<meta name="description" content="<?php echo $metadescription;?>" />
+		<meta http-equiv="Permissions-Policy" content="cookies=(self)" />
+		<link rel="stylesheet" type="text/css" href="<?=$lpath?>templates/school/style.css" />
+		<link type="text/css" href="<?=$lpath?>js/jquery.lightbox.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<link href="favicon.ico" rel="icon" type="image/x-icon" />
+		<!-- <link rel="stylesheet" href="./styles/styles.css"> -->
+		<link rel="stylesheet" href="./test/test.css" />
+	</head>
 
-<head>
-  <meta charset="windows-1251" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <?php echo $sitetitle;?>
-  </title>
-  <meta name="keywords" content="<?php echo $metakeywords;?>" />
-  <meta name="description" content="<?php echo $metadescription;?>" />
-  <meta http-equiv="Permissions-Policy" content="cookies=(self)">
-  <link rel="stylesheet" type="text/css" href="<?=$lpath?>templates/school/style.css" />
-  <link type="text/css" href="<?=$lpath?>js/jquery.lightbox.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <link href="favicon.ico" rel="icon" type="image/x-icon" />
-  <!-- <link rel="stylesheet" href="./styles/styles.css"> -->
-  <link rel="stylesheet" href="./test/test.css">
-</head>
+	<body id="body">
+		<div id="wrap">
+			<!---------- HEADER ---------->
+			<header id="header" class="header">
+				<!-- ліва частина хедера -->
+				<div class="header__wrap--left">
+					<a href="/" rel="noopener noreferrer nofollow" class="logo--link">
+						<img class="site__logo" src="http://sch3.mledu.vn.ua/media/image/liceum-tr-emblem.png" width="100" alt="Емблема ліцею №3" />
+					</a>
+					<div class="site__title--wrap">
+						<h1 class="site__title"><a href="/" class="reload-page">Ліцей №3</a></h1>
+						<h2 class="site__aftertitle"><a href="/" class="reload-page">Ладижинської міської ради</a></h2>
+						<h2 class="site__aftertitle"><a href="/" class="reload-page">Вінницької області</a></h2>
+					</div>
+				</div>
 
-<body id="body">
-  <div id="wrap">
+				<!-- права частина хедера -->
+				<div class="header__wrap--right">
+					<!-- contacts -->
+					<div class="header__contacts">
+						<p class="header__contacts--tel">📞&nbsp;<a href="tel:+380434361760" class="header__link">+38 (04343) 6-17-60</a></p>
+						<p class="header__contacts--mail">📧&nbsp;<a href="mailto:lad_shkola3@ukr.net" class="header__link">lad_shkola3@ukr.net</a></p>
+						<p><a href="#footer" class="header__link">🔗&nbsp;Наші соцмережі</a></p>
+					</div>
+				</div>
+			</header>
 
-    <!---------- HEADER ---------->
-    <header id="header" class="header">
-      <!-- ліва частина хедера -->
-      <div class="header__wrap--left">
-        <a href="/" rel="noopener noreferrer nofollow" class="logo--link">
-          <img class="site__logo" src="http://sch3.mledu.vn.ua/media/image/liceum-tr-emblem.png" width="100"
-            alt="Емблема ліцею №3">
-        </a>
-        <div class="site__title--wrap">
-          <h1 class="site__title"><a href="/" class="reload-page">Ліцей №3</a></h1>
-          <h2 class="site__aftertitle"><a href="/" class="reload-page">Ладижинської міської ради</a></h2>
-          <h2 class="site__aftertitle"><a href="/" class="reload-page">Вінницької області</a></h2>
-        </div>
-      </div>
+			<!---------- TOP NAVIGATION (MENU) ---------->
+			<menu id="menu" class="top-nav">
+				<ul class="top-nav__list">
+					<li class="top-nav__item"><a class="top-nav__link" href="<?=$lpath?>/" rel="noopener noreferrer nofollow">Головна</a></li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/guestbook.html" rel="noopener noreferrer nofollow">Громадська приймальня</a>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/nash_zaklad/">Структура закладу<span class="top-nav--triangle">▾</span></a>
+						<ul class="top-nav__sublist">
+							<li class="top-nav__subitem">
+								<a href="/nash_zaklad/admnstratsya.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Адміністрація закладу</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/nash_zaklad/storya_zakladu.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Історія ліцею</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/nash_zaklad/proiekti.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Проєкти</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/nash_zaklad/upravlnnya_zakladom.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Управління закладом освіти</a
+								>
+							</li>
+						</ul>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/dlya_batkv/" rel="noopener noreferrer nofollow"
+							>Батькам<span class="top-nav--triangle">▾</span></a
+						>
+						<ul class="top-nav__sublist">
+							<li class="top-nav__subitem">
+								<a
+									href="https://docs.google.com/document/d/1FqlTbKAVEEWY9AAxjMreNXyks6tpgnm1/edit?usp=sharing&ouid=109542012792640167579&rtpof=true&sd=true"
+									rel="noopener noreferrer nofollow"
+									class="top-nav__sublink"
+									>До уваги батьків</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_batkv/batkam_maybutnh_pershoklasnikv/" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Батькам майбутніх першокласників</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="https://beinternetawesome.withgoogle.com/uk_ua" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Безпека дітей у інтернеті</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_batkv/zapobgannya_terorizmu.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Запобігання тероризму</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_batkv/zayavi_ta_dovdki/" rel="noopener noreferrer nofollow" class="top-nav__sublink">Заяви та довідки</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_batkv/mnna_bezpeka.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Мінна безпека</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_batkv/pamyatki_dlya_batkv/" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Пам&rsquo;ятки для батьків</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a
+									href="https://drive.google.com/file/d/1NyYU8u0mA8pfBIgKwffAhvxgYRhJUkiq/view?usp=sharing"
+									rel="noopener noreferrer nofollow"
+									class="top-nav__sublink"
+									>Порядок зарахування, переведення та відрахування з закладу</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_batkv/pravila_zvtnost_za_propuski.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Правила звітності за пропуски</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/harchuvannya.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Реквізити для оплати за харчування</a
+								>
+							</li>
+						</ul>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/dlya_vchitelv/" rel="noopener noreferrer nofollow"
+							>Педагогам<span class="top-nav--triangle">▾</span></a
+						>
+						<ul class="top-nav__sublist">
+							<li class="top-nav__subitem">
+								<a href="/dlya_vchitelv/atestatsya/" rel="noopener noreferrer nofollow" class="top-nav__sublink">Атестація</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_vchitelv/kriteri_otsnyuvannya/" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Критерії оцінювання</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_vchitelv/metodichna_robota/" rel="noopener noreferrer nofollow" class="top-nav__sublink">Методична робота</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_vchitelv/pdvishchennya_kvalfkatsi/" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Підвищення кваліфікації</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_vchitelv/posadov_nstruktsi.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Посадові інструкції працівників закладу</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_vchitelv/pravila_rozporyadku.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Правила внутрішнього трудового розпорядку</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_vchitelv/sertifkatsya/" rel="noopener noreferrer nofollow" class="top-nav__sublink">Сертифікація</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/tvorcha_laboratorya_vchitelya/" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Творча лабораторія вчителя</a
+								>
+							</li>
+						</ul>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/dlya_uchnv/">Учням<span class="top-nav--triangle">▾</span></a>
+						<ul class="top-nav__sublist">
+							<li class="top-nav__subitem">
+								<a href="/dlya_uchnv/zagaln_kriotsnki.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Загальні критерії оцінювання</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_uchnv/znonmt_dpa/" rel="noopener noreferrer nofollow" class="top-nav__sublink">ЗНО/НМТ, ДПА</a>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_uchnv/prava_ta_obovyazki.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Права та обов&rsquo;язки учнів</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_uchnv/pravila_povednki_v_zaklad.html" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Правила поведінки в закладі</a
+								>
+							</li>
+							<li class="top-nav__subitem">
+								<a href="/dlya_uchnv/uchnvske_samovryaduvannya/" rel="noopener noreferrer nofollow" class="top-nav__sublink"
+									>Учнівське самоврядування</a
+								>
+							</li>
+						</ul>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/korisn_posilannya.html" rel="noopener noreferrer nofollow">Корисні посилання</a>
+					</li>
+				</ul>
+			</menu>
 
-      <!-- права частина хедера -->
-      <div class="header__wrap--right">
-        <!-- contacts -->
-        <div class="header__contacts">
-          <p class="header__contacts--tel">📞&nbsp;<a href="tel:+380434361760" class="header__link">+38 (04343)
-              6-17-60</a>
-          </p>
-          <p class="header__contacts--mail">📧&nbsp;<a href="mailto:lad_shkola3@ukr.net"
-              class="header__link">lad_shkola3@ukr.net</a>
-          </p>
-          <p><a href="#footer" class="header__link">🔗&nbsp;Наші соцмережі</a></p>
-        </div>
-      </div>
-    </header>
+			<!---------- CONTENT ---------->
+			<div id="content">
+				<!---------- SIDEBAR ---------->
+				<aside class="sidebar">
+					<!-- sidebar navigation -->
+					<nav id="left" class="side-nav">
+						<div class="side-nav__title--wrap">
+							<h2 class="side-nav__title">Навігація</h2>
+							<button type="button" class="side-nav__btn--open" aria-label="open-nav">
+								<svg role="img" width="24" height="24" viewBox="0 0 24 24" class="side-nav__icon" fill="#f6f6f6">
+									<title lang="uk">Навігація</title>
+									<path
+										d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" />
+								</svg>
+							</button>
+							<button type="button" class="side-nav__btn--close" aria-label="close-nav">
+								<svg role="img" width="24" height="24" viewBox="0 0 1024 1024" class="side-nav__icon" fill="#f6f6f6">
+									<title>Закрити</title>
+									<path
+										d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" />
+								</svg>
+							</button>
+						</div>
+						<script>
+							(() => {
+								const refs = {
+									openModalBtn: document.querySelector('[open-nav]'),
+									closeModalBtn: document.querySelector('[close-nav]'),
+									modal: document.querySelector('[aside-nav]'),
+									body: document.querySelector('body'),
+								};
 
-    <!---------- TOP NAVIGATION (MENU) ---------->
-    <menu id="menu" class="top-nav">
-      <ul class="top-nav__list">
-        <li class="top-nav__item"><a class="top-nav__link" href="<?=$lpath?>/"
-            rel="noopener noreferrer nofollow">Головна</a></li>
-        <li class="top-nav__item"><a class="top-nav__link" href="/guestbook.html"
-            rel="noopener noreferrer nofollow">Громадська приймальня</a></li>
-        <li class="top-nav__item">
-          <a class="top-nav__link" href="/nash_zaklad/">Структура закладу<span class="top-nav--triangle">▾</span></a>
-          <ul class="top-nav__sublist">
-            <li class="top-nav__subitem">
-              <a href="/nash_zaklad/admnstratsya.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Адміністрація закладу</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/nash_zaklad/storya_zakladu.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Історія
-                ліцею</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/nash_zaklad/proiekti.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Проєкти</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/nash_zaklad/upravlnnya_zakladom.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Управління закладом освіти</a>
-            </li>
-          </ul>
-        </li>
-        <li class="top-nav__item">
-          <a class="top-nav__link" href="/dlya_batkv/" rel="noopener noreferrer nofollow">Батькам<span
-              class="top-nav--triangle">▾</span></a>
-          <ul class="top-nav__sublist">
-            <li class="top-nav__subitem">
-              <a href="https://docs.google.com/document/d/1FqlTbKAVEEWY9AAxjMreNXyks6tpgnm1/edit?usp=sharing&ouid=109542012792640167579&rtpof=true&sd=true"
-                rel="noopener noreferrer nofollow" class="top-nav__sublink">До уваги батьків</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_batkv/batkam_maybutnh_pershoklasnikv/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Батькам майбутніх першокласників</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="https://beinternetawesome.withgoogle.com/uk_ua" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Безпека дітей у Інтернеті</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_batkv/zayavi_ta_dovdki/" rel="noopener noreferrer nofollow" class="top-nav__sublink">Заяви та довідки</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_batkv/mnna_bezpeka.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Мінна безпека</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_batkv/pamyatki_dlya_batkv/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Пам&rsquo;ятки для батьків</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="https://drive.google.com/file/d/1NyYU8u0mA8pfBIgKwffAhvxgYRhJUkiq/view?usp=sharing"
-                rel="noopener noreferrer nofollow" class="top-nav__sublink">Порядок зарахування, переведення та відрахування з закладу</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_batkv/pravila_zvtnost_za_propuski.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Правила звітності за пропуски</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/harchuvannya.html" rel="noopener noreferrer nofollow" class="top-nav__sublink">Реквізити для
-                оплати за харчування</a>
-            </li>
-          </ul>
-        </li>
-        <li class="top-nav__item">
-          <a class="top-nav__link" href="/dlya_vchitelv/" rel="noopener noreferrer nofollow">Педагогам<span
-              class="top-nav--triangle">▾</span></a>
-          <ul class="top-nav__sublist">
-            <li class="top-nav__subitem">
-              <a href="/dlya_vchitelv/atestatsya/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Атестація</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_vchitelv/kriteri_otsnyuvannya/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Критерії оцінювання</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_vchitelv/metodichna_robota/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Методична робота</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_vchitelv/pdvishchennya_kvalfkatsi/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Підвищення кваліфікації</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_vchitelv/posadov_nstruktsi.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Посадові інструкції працівників закладу</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_vchitelv/pravila_rozporyadku.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Правила внутрішнього трудового розпорядку</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_vchitelv/sertifkatsya/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Сертифікація</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/tvorcha_laboratorya_vchitelya/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Творча лабораторія вчителя</a>
-            </li>
-          </ul>
-        </li>
-        <li class="top-nav__item">
-          <a class="top-nav__link" href="/dlya_uchnv/">Учням<span class="top-nav--triangle">▾</span></a>
-          <ul class="top-nav__sublist">
-            <li class="top-nav__subitem">
-              <a href="/dlya_uchnv/zagaln_kriotsnki.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Загальні критерії оцінювання</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_uchnv/znonmt_dpa/" rel="noopener noreferrer nofollow" class="top-nav__sublink">ЗНО/НМТ,
-                ДПА</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_uchnv/prava_ta_obovyazki.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Права та обов&rsquo;язки учнів</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_uchnv/pravila_povednki_v_zaklad.html" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Правила поведінки в закладі</a>
-            </li>
-            <li class="top-nav__subitem">
-              <a href="/dlya_uchnv/uchnvske_samovryaduvannya/" rel="noopener noreferrer nofollow"
-                class="top-nav__sublink">Учнівське самоврядування</a>
-            </li>
-          </ul>
-        </li>
-        <li class="top-nav__item"><a class="top-nav__link" href="/korisn_posilannya.html"
-            rel="noopener noreferrer nofollow">Корисні посилання</a></li>
-      </ul>
-    </menu>
+								refs.openModalBtn.addEventListener('click', toggleModal);
+								refs.closeModalBtn.addEventListener('click', toggleModal);
 
-    <!---------- CONTENT ---------->
-    <div id="content">
+								function toggleModal() {
+									refs.modal.classList.toggle('is-hidden');
+									refs.body.classList.toggle('no-scroll');
+								}
+							})();
+						</script>
 
-      <!---------- SIDEBAR ---------->
-      <aside class="sidebar">
+						<ul class="side-nav__list" aria-label="aside-nav">
+							<!-- замість списка на сайті <?php include $_SERVER['DOCUMENT_ROOT'].'/engine/menu.php'; ?> -->
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/antikoruptsyn_zahodi.html" rel="noopener noreferrer nofollow">Антикорупційні заходи</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/akademchna_dobrochesnst.html" rel="noopener noreferrer nofollow"
+									>Академічна доброчесність</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/bezbariernst.html" rel="noopener noreferrer nofollow">Безбар&rsquo;єрність</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/bezpeka_osvtnogo_seredovishcha/" rel="noopener noreferrer nofollow"
+									>Безпека освітнього середовища</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/bbloteka/" rel="noopener noreferrer nofollow">Бібліотека</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/vikoristannya_pozabyudzhetnih_koshtv.html" rel="noopener noreferrer nofollow"
+									>Використання позабюджетних коштів</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/vihovna_robota/" rel="noopener noreferrer nofollow">Виховна робота</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/distantsyne_navchannya.html" rel="noopener noreferrer nofollow">Дистанційне навчання</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/elektronniy_zhurnal.html" rel="noopener noreferrer nofollow">Електронний журнал</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/ltseyu_mi_gotov/" rel="noopener noreferrer nofollow"
+									>Інформаційна кампанія &quot;Ліцею, ми готові!&quot;</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/medichna_sluzhba/" rel="noopener noreferrer nofollow">Медична служба</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/naukovo-pedagogchniy_proekt_ntelekt_ukraini.html" rel="noopener noreferrer nofollow"
+									>Науково-педагогічний проєкт &quot;Інтелект України&quot;</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/normativno-pravov_dokumenti.html" rel="noopener noreferrer nofollow"
+									>Нормативно-правові документи</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/organzatsya_osvtnogo_protsesu/" rel="noopener noreferrer nofollow"
+									>Організація освітнього процесу</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/prozorst_ta_nformatsyna_vdkritst_zakladu_osvti/" rel="noopener noreferrer nofollow"
+									>Прозорість та інформаційна відкритість закладу освіти</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/profsplkoviy_komtet.html" rel="noopener noreferrer nofollow">Профспілковий комітет</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/sotsalno-psihologchna_sluzhba/" rel="noopener noreferrer nofollow"
+									>Соціально - психологічна служба</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/spvpratsya_z_sluzhbami.html" rel="noopener noreferrer nofollow"
+									>Співпраця з державними та міськими службами</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/strategya_rozvitku_zakladu.html" rel="noopener noreferrer nofollow"
+									>Стратегія розвитку закладу</a
+								>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link" href="/harchuvannya/" rel="noopener noreferrer nofollow">Харчування</a>
+							</li>
+						</ul>
+					</nav>
+				</aside>
 
-        <!-- sidebar navigation -->
-        <nav id="left" class="side-nav">
-          <div class="side-nav__title--wrap">
-            <h2 class=" side-nav__title">Навігація</h2>
-            <button type="button" class="side-nav__btn--open" aria-label="open-nav">
-              <svg role="img" width="24" height="24" viewBox="0 0 24 24" class="side-nav__icon" fill="#f6f6f6">
-                <title lang="uk">Навігація</title>
-                <path
-                  d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" />
-              </svg>
-            </button>
-            <button type="button" class="side-nav__btn--close" aria-label="close-nav">
-              <svg role="img" width="24" height="24" viewBox="0 0 1024 1024" class="side-nav__icon" fill="#f6f6f6">
-                <title>Закрити</title>
-                <path
-                  d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" />
-              </svg>
-            </button>
-          </div>
-          <script>
-            (() => {
-              const refs = {
-                openModalBtn: document.querySelector('[open-nav]'),
-                closeModalBtn: document.querySelector('[close-nav]'),
-                modal: document.querySelector('[aside-nav]'),
-                body: document.querySelector('body'),
-              };
+				<!---------- MAIN CONTENT ---------->
+				<main id="right" class="main-content">
+					<h2 class="main-content__title">
+						Зараз ви на сторінці <span style="color: #244d99"><?php echo $sitetitle;?></span>
+					</h2>
 
-              refs.openModalBtn.addEventListener('click', toggleModal);
-              refs.closeModalBtn.addEventListener('click', toggleModal);
+					<!-- search script -->
+					<script async src="https://cse.google.com/cse.js?cx=915acb8bdb13344fa"></script>
+					<div class="gcse-search">&nbsp;</div>
 
-              function toggleModal() {
-                refs.modal.classList.toggle('is-hidden');
-                refs.body.classList.toggle('no-scroll');
-              }
-            })();
-          </script>
+					<!-- makes main content visible -->
+					<?php echo $contentcenter;?>
+				</main>
+			</div>
 
-          <ul class="side-nav__list" aria-label="aside-nav">
-            <!-- замість списка на сайті <?php include $_SERVER['DOCUMENT_ROOT'].'/engine/menu.php'; ?> -->
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/antikoruptsyn_zahodi.html"
-                rel="noopener noreferrer nofollow">Антикорупційні заходи</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/akademchna_dobrochesnst.html"
-                rel="noopener noreferrer nofollow">Академічна доброчесність</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/bezbariernst.html"
-                rel="noopener noreferrer nofollow">Безбар&rsquo;єрність</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/bezpeka_osvtnogo_seredovishcha/"
-                rel="noopener noreferrer nofollow">Безпека освітнього середовища</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/bbloteka/" rel="noopener noreferrer nofollow">Бібліотека</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/vikoristannya_pozabyudzhetnih_koshtv.html"
-                rel="noopener noreferrer nofollow">Використання позабюджетних коштів</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/vihovna_robota/" rel="noopener noreferrer nofollow">Виховна робота</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/distantsyne_navchannya.html"
-                rel="noopener noreferrer nofollow">Дистанційне навчання</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/elektronniy_zhurnal.html" rel="noopener noreferrer nofollow">Електронний
-                журнал</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/ltseyu_mi_gotov/" rel="noopener noreferrer nofollow">Інформаційна
-                кампанія &quot;Ліцею, ми готові!&quot;</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/medichna_sluzhba/" rel="noopener noreferrer nofollow">Медична служба</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/naukovo-pedagogchniy_proekt_ntelekt_ukraini.html"
-                rel="noopener noreferrer nofollow">Науково-педагогічний проєкт &quot;Інтелект України&quot;</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/normativno-pravov_dokumenti.html"
-                rel="noopener noreferrer nofollow">Нормативно-правові документи</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/organzatsya_osvtnogo_protsesu/"
-                rel="noopener noreferrer nofollow">Організація освітнього процесу</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/prozorst_ta_nformatsyna_vdkritst_zakladu_osvti/"
-                rel="noopener noreferrer nofollow">Прозорість та інформаційна відкритість закладу освіти</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/profsplkoviy_komtet.html"
-                rel="noopener noreferrer nofollow">Профспілковий комітет</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/sotsalno-psihologchna_sluzhba/"
-                rel="noopener noreferrer nofollow">Соціально - психологічна служба</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/spvpratsya_z_sluzhbami.html" rel="noopener noreferrer nofollow">Співпраця
-                з державними та міськими службами</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/strategya_rozvitku_zakladu.html"
-                rel="noopener noreferrer nofollow">Стратегія розвитку закладу</a>
-            </li>
-            <li class="side-nav__item">
-              <a class="side-nav__link" href="/harchuvannya/" rel="noopener noreferrer nofollow">Харчування</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
-      <!---------- MAIN CONTENT ---------->
-      <main id="right" class="main-content">
-        <h2 class="main-content__title">Зараз ви на сторінці <span style="color: #244d99;"><?php echo $sitetitle;?></span>
-        </h2>
-
-        <!-- search script -->
-        <script async src="https://cse.google.com/cse.js?cx=915acb8bdb13344fa"></script>
-        <div class="gcse-search">&nbsp;</div>
-
-        <!-- makes main content visible -->
-        <?php echo $contentcenter;?>
-      </main>
-    </div>
-
-    <!---------- FOOTER ---------->
-    <footer class="footer" id="footer">
-      <div class="footer__container">
-        <div class="footer__address-contacts-wrap">
-          <!-- адреса -->
-          <div class="footer__address-wrap">
-            <h2 class="footer__heading footer--text-color">Адреса</h2>
-            <hr />
-            <address class="footer__address">
-              <p class="footer__text footer--text-color">вул. Петра Кравчика, 53,</p>
-              <p class="footer__text footer--text-color">м. Ладижин Гайсинського р-ну</p>
-              <p class="footer__text footer--text-color">Вінницької обл., 24321</p>
-            </address>
-          </div>
-          <!-- контакти -->
-          <div class="footer__contacts-wrap">
-            <h2 class="footer__heading footer--text-color">Контакти</h2>
-            <hr />
-            <div class="footer__contacts">
-              <p class="footer__text">
-                <a href="tel:+380434361760" class="footer__link footer--text-color"
-                  rel="noopener noreferrer nofollow">+38 (04343) 6-17-60</a>
-              </p>
-              <p class="footer__text">
-                <a href="mailto:lad_shkola3@ukr.net" class="footer__link footer--text-color"
-                  rel="noopener noreferrer nofollow">lad_shkola3@ukr.net</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- соцмережі -->
-        <div class="footer-networks">
-          <h2 class="footer__heading footer--text-color">Стежте за нами</h2>
-          <hr />
-          <ul class="footer-networks__list">
-            <li class="footer-networks__item"><a class="footer-networks__link"
-                href="https://www.facebook.com/groups/188523318735306/?ref=share" target="_blank"
-                rel="noopener noreferrer nofollow">
-                <svg role="img" viewBox="0 0 24 24" width="32" height="32" class="networks--fb">
-                  <title>Facebook</title>
-                  <path fill="#0866ff"
-                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
-                </svg>
-              </a>
-            </li>
-            <li class="footer-networks__item"><a class="footer-networks__link"
-                href="https://www.instagram.com/ladyzhinsky_lyceum_3?igsh=MWk0cWlzNjFkaTFvdA==" target="_blank"
-                rel="noopener noreferrer nofollow">
-                <svg role="img" viewBox="0 0 24 24" width="32" height="32" class="networks--inst">
-                  <title>Instagram</title>
-                  <defs>
-                    <linearGradient id="instaGradient" x1="0" x2="1" y1="1" y2="0">
-                      <stop class="stop1" offset="3%" />
-                      <stop class="stop2" offset="15%" />
-                      <stop class="stop3" offset="44%" />
-                      <stop class="stop4" offset="71%" />
-                      <stop class="stop5" offset="100%" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
-                </svg>
-              </a>
-            </li>
-            <li class="footer-networks__item"><a class="footer-networks__link"
-                href="https://www.youtube.com/channel/UCaTIYT_IGrxKI80EUp4q8jw" target="_blank"
-                rel="noopener noreferrer nofollow">
-                <svg role="img" viewBox="0 0 24 24" width="40" height="32" class="networks--utube">
-                  <title>YouTube</title>
-                  <path fill="#ff0000"
-                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
-                  </path>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__container"><a class="footer__link footer__text footer--text-color"
-          href="http://sch3.mledu.vn.ua/admin" rel="noopener noreferrer nofollow" target="_blank">🔐 Вхід для
-          адміністратора</a></div>
-      <div class="footer__container footer__copy footer--text-color">
-        © 2010
-        <?php echo $sitename;?>. Усі права захищено.
-      </div>
-    </footer>
-  </div>
-  <!---------- #WRAP ENDS ---------->
-  <!-- скрипт для плавного гортання сторінки -->
-  <script>
-    $(document).ready(function () {
-      $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        var target = this.hash,
-          $target = $(target);
-        $('html, body').stop().animate({
-          'scrollTop': $target.offset().top
-        }, 500, 'swing', function () {
-          window.location.hash = target;
-        });
-      });
-    });
-  </script>
-</body>
-
+			<!---------- FOOTER ---------->
+			<footer class="footer" id="footer">
+				<div class="footer__container">
+					<div class="footer__address-contacts-wrap">
+						<!-- адреса -->
+						<div class="footer__address-wrap">
+							<h2 class="footer__heading footer--text-color">Адреса</h2>
+							<hr />
+							<address class="footer__address">
+								<p class="footer__text footer--text-color">вул. Петра Кравчика, 53,</p>
+								<p class="footer__text footer--text-color">м. Ладижин Гайсинського р-ну</p>
+								<p class="footer__text footer--text-color">Вінницької обл., 24321</p>
+							</address>
+						</div>
+						<!-- контакти -->
+						<div class="footer__contacts-wrap">
+							<h2 class="footer__heading footer--text-color">Контакти</h2>
+							<hr />
+							<div class="footer__contacts">
+								<p class="footer__text">
+									<a href="tel:+380434361760" class="footer__link footer--text-color" rel="noopener noreferrer nofollow"
+										>+38 (04343) 6-17-60</a
+									>
+								</p>
+								<p class="footer__text">
+									<a href="mailto:lad_shkola3@ukr.net" class="footer__link footer--text-color" rel="noopener noreferrer nofollow"
+										>lad_shkola3@ukr.net</a
+									>
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- соцмережі -->
+					<div class="footer-networks">
+						<h2 class="footer__heading footer--text-color">Стежте за нами</h2>
+						<hr />
+						<ul class="footer-networks__list">
+							<li class="footer-networks__item">
+								<a
+									class="footer-networks__link"
+									href="https://www.facebook.com/groups/188523318735306/?ref=share"
+									target="_blank"
+									rel="noopener noreferrer nofollow">
+									<svg role="img" viewBox="0 0 24 24" width="32" height="32" class="networks--fb">
+										<title>Facebook</title>
+										<path
+											fill="#0866ff"
+											d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+									</svg>
+								</a>
+							</li>
+							<li class="footer-networks__item">
+								<a
+									class="footer-networks__link"
+									href="https://www.instagram.com/ladyzhinsky_lyceum_3?igsh=MWk0cWlzNjFkaTFvdA=="
+									target="_blank"
+									rel="noopener noreferrer nofollow">
+									<svg role="img" viewBox="0 0 24 24" width="32" height="32" class="networks--inst">
+										<title>Instagram</title>
+										<defs>
+											<linearGradient id="instaGradient" x1="0" x2="1" y1="1" y2="0">
+												<stop class="stop1" offset="3%" />
+												<stop class="stop2" offset="15%" />
+												<stop class="stop3" offset="44%" />
+												<stop class="stop4" offset="71%" />
+												<stop class="stop5" offset="100%" />
+											</linearGradient>
+										</defs>
+										<path
+											d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+									</svg>
+								</a>
+							</li>
+							<li class="footer-networks__item">
+								<a
+									class="footer-networks__link"
+									href="https://www.youtube.com/channel/UCaTIYT_IGrxKI80EUp4q8jw"
+									target="_blank"
+									rel="noopener noreferrer nofollow">
+									<svg role="img" viewBox="0 0 24 24" width="40" height="32" class="networks--utube">
+										<title>YouTube</title>
+										<path
+											fill="#ff0000"
+											d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__container">
+					<a
+						class="footer__link footer__text footer--text-color"
+						href="http://sch3.mledu.vn.ua/admin"
+						rel="noopener noreferrer nofollow"
+						target="_blank"
+						>🔐 Вхід для адміністратора</a
+					>
+				</div>
+				<div class="footer__container footer__copy footer--text-color">
+					© 2010
+					<?php echo $sitename;?>. Усі права захищено.
+				</div>
+			</footer>
+		</div>
+		<!---------- #WRAP ENDS ---------->
+		<!-- скрипт для плавного гортання сторінки -->
+		<script>
+			$(document).ready(function () {
+				$('a[href^="#"]').on('click', function (e) {
+					e.preventDefault();
+					var target = this.hash,
+						$target = $(target);
+					$('html, body')
+						.stop()
+						.animate(
+							{
+								scrollTop: $target.offset().top,
+							},
+							500,
+							'swing',
+							function () {
+								window.location.hash = target;
+							}
+						);
+				});
+			});
+		</script>
+	</body>
 </html>
